@@ -8,9 +8,9 @@
 
       <div class="d-flex align-items-center gap-5 d-none d-lg-flex">
         <select class="form-select form-select-sm w-auto" id="languageSelect">
-          <option value="en">English</option>
-          <option value="es">Spanish</option>
-          <option value="fr">French</option>
+          <option value="en" >English</option>
+          <option value="es" >Spanish</option>
+          <option value="fr" >French</option>
         </select>
 
         <div class="dropdown">
@@ -24,18 +24,54 @@
         </div>
 
         <div class="d-flex align-items-center gap-4 d-none d-lg-flex">
-          <a href="#" class="text-secondary" title="Balance">
-          <i class="bi bi-briefcase fs-5"></i> 
-        </a>
-        <a href="#" class="text-secondary position-relative" title="Notifications">
-          <i class="bi bi-bell fs-5"></i>
-          <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="font-size:0.6em;">3</span>
-          
-        </a>
-        <a href="#" class="text-danger" title="Logout" id="logoutBtn">
-          <i class="bi bi-box-arrow-right fs-5"></i>
-          
-        </a>
+         <div class="dropdown">
+  <a href="#" class="text-secondary" title="Balance" id="briefDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+    <i class="bi bi-briefcase fs-5"></i>
+  </a>
+  <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="briefDropdown" style="background-color: var(--color-back); color: var(--color-text); ">
+    <li><span class="dropdown-item-text">Balance: $1234.56</span></li>
+    <div class="d-grid mt-3">
+        <button class="btn" style="background-color: var(--color-primary); color: black; ">Overview</button>
+      </div>
+  </ul>
+</div>
+
+<!-- BELL DROPDOWN WITH SUBTABS -->
+<div class="dropdown">
+  <a href="#" class="text-secondary position-relative" title="Notifications" id="bellDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+    <i class="bi bi-bell fs-5"></i>
+    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="font-size:0.6em;">3</span>
+  </a>
+  <div class="dropdown-menu dropdown-menu-end p-0" style="width: 450px; background: black; border: 2px solid var(--color-primary); color: var(--color-back);">
+    <ul class="nav nav-tabs nav-fill border-bottom flex-row" id="notifTabs" style="background: var(--color-back);">
+      <li class="nav-item">
+        <a class="nav-link " href="#" data-target="alerts" style="color: black;">Alerts</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#" data-target="messages" style="color: black;">Messages</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#" data-target="balance" style="color: black;">balance</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#" data-target="account" style="color: black;">account</a>
+      </li>
+    </ul>
+    <div id="notifContent" class="p-3">
+      <div class="notif-pane" id="alerts" style="color: var(--color-back);">No new alerts.</div>
+      <div class="notif-pane d-none" id="messages" style="color: var(--color-back);">No new messages.</div>
+      <div class="notif-pane" id="balance" style="color: var(--color-back);">No new alerts.</div>
+      <div class="notif-pane d-none" id="account" style="color: var(--color-back);">No new messages.</div>
+    </div>
+  </div>
+</div>
+        
+          <div>
+            <a href="#" class="text-danger" title="Logout" id="logoutBtn">
+              <i class="bi bi-box-arrow-right fs-5"></i>
+             </a>
+          </div>
+        
         </div>
         
       </div>

@@ -71,6 +71,23 @@ function initDashNav() {
     alert("Logging out...");
   });
 
+document.addEventListener("DOMContentLoaded", () => {
+  const tabs = document.querySelectorAll("#notifTabs .nav-link");
+  const panes = document.querySelectorAll(".notif-pane");
+
+  tabs.forEach(tab => {
+    tab.addEventListener("click", (e) => {
+      e.preventDefault();
+      tabs.forEach(t => t.classList.remove("active"));
+      tab.classList.add("active");
+      const target = tab.getAttribute("data-target");
+      panes.forEach(pane => {
+        pane.classList.toggle("d-none", pane.id !== target);
+      });
+    });
+  });
+});
+
 
   const currentPath = window.location.pathname;
   document.querySelectorAll(".nav-link").forEach((link) => {

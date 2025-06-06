@@ -12,15 +12,64 @@
     <!-- Navbar -->
     <div id="navbar"></div>
 
-  <main class="container mt-4">
-    <h1>Welcome to Dashboard</h1>
-  </main>
+   <!-- Hero Section -->
+     <section class="container py-5">
+  <div class="row align-items-center flex-column-reverse flex-md-row">
+    <div class="col-md-6 text-center text-md-start">
+      <p class="lead fs-2" >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do</p>
+      <p class="lead">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus consectetur, esse quae ratione quibusdam nulla accusantium! Aut aperiam nisi, impedit similique quis vitae corrupti veniam animi est dicta, tempore voluptatum?</p>
+
+      <div>
+        <a href="#get-started" class="btn" style="background-color: var(--color-primary); color: var(--color-bg);">lorem</a>
+      </div>
+    </div>
+
+    <div class="col-md-6 text-center">
+   <img
+      src="/assets/daboard-hero.png"
+      alt="MyCompany Logo"
+      class="img-fluid mb-2"
+      style="
+        position: relative;
+        z-index: 1;
+        display: block;
+        width: auto;
+        height: auto;
+      "
+    />
+</div>
+
+  </div>
+      </section>
+
+
+     <!-- card Section -->
+    <div class="container py-5">
+         <div  class="d-flex justify-content-between align-items-center">
+        <div class="d-flex gap-2">
+          <select class="form-select form-select-sm w-auto" id="languageSelect">
+          <option value="en" >7Days</option>
+          <option value="es" >14Days</option>
+          <option value="fr" >30Days</option>
+        </select>
+
+        
+        </div>
+        
+          <div style="position: relative;">
+               <input name="search" type="search"  class="form-control bg-transparent text-dark ps-5" id="email" placeholder="search Trader" />
+              <i class="bi bi-search" style="position: absolute; top: 50%; left: 15px; transform: translateY(-50%); color: #6c757d;"></i>
+            </div>
+          </div> 
+        <div id="card-container" class="card-grid"></div>
+        </div>  
 
     <!--footer-->
   <div id="footer"></div>
    <!-- js -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
-<script type="module" src="/component/dashNav/dashNav.js"></script>
+   <script type="module" src="/component/dashNav/dashNav.js"></script>
   <script src="/component/footer/footer.js"></script>
+  <script type="module" src="/utils/plan.js"></script>
 </body>
 </html>

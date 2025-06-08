@@ -155,31 +155,7 @@
    
   <section class="container my-5 rounded " style="border: 1px solid var(--color-secondary);">
   <p class="fw-bold text-start">Pending / Open contracts</p>  
-    <table class="table table-sm">
-  <thead>
-    <tr>
-      <th scope="col"># </th>
-      <th scope="col">Order ID</th>
-      <th scope="col">Account</th>
-      <th scope="col">Amount</th>
-      <th scope="col">Method</th>
-      <th scope="col">Status</th>
-      <th scope="col">Date</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row"></th>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-    </tr>
-    
-  </tbody>
-   </table>
+   <deposit-table></deposit-table>
   </section>
    
 
@@ -192,6 +168,7 @@
 <script type="module" src="/component/dashNav/dashNav.js"></script>
   <script src="/component/footer/footer.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="/utils/table.js"></script>
 <script>
    const btcCtx = document.getElementById('btcLineChart').getContext('2d');
   new Chart(btcCtx, {

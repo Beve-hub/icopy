@@ -1,3 +1,5 @@
+
+
 function createAccordion(containerId, items) {
   const container = document.getElementById(containerId);
   if (!container) {

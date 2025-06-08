@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <title>iCopyTrader</title>
+</head>
+<body>
+    <!-- Navbar -->
+    <div id="navbar"></div>
+    
+    <section class="container">
+  <div class="fw-bold fs-5" style="border-bottom: 2px solid var(--color-text); padding: 20px 0; ">Select Coin</div>
+
+  <div class="row g-4 align-items-start flex-column flex-md-row my-4">
+    <!-- Coin select field and buttons -->
+
+   
+    <div class="col-12 col-md-6">
+         <div class="mb-3">
+             <div class="mb-3">
+              <div id="selectedCoin" class="mt-2"></div>
+             </div>
+           <div id="coinBtns" class="d-flex flex-wrap"></div>
+        </div>
+
+       <div class="mb-3">
+        <select class="form-select form-select-sm  bg-transparent text-white" id="networkSelect" aria-label="networkSelect" style="width: 450px; height: 42px;">
+           <option  class="bg-dark text-white" selected>Trc20</option>
+           <option  class="bg-dark text-white" value="1">Erc20</option>
+           <option   class="bg-dark text-white" value="2">Polygon</option>
+           <option  class="bg-dark text-white" value="3">Ton</option>
+        </select>
+       </div>
+        
+        <div class="mb-3" >
+            <p class="fw-bold">Details</p>
+            <div  class="border rounded h-auto p-4" style="width: 450px;" >
+                <div class="d-flex gap-3 align-items-center" >
+                    <img src="/assets/qr code.png" alt="" style="width: 60px; height: auto;">
+
+                    <div>
+                        <span>Deposit Address</span>
+                        <div class="d-flex gap-3 " >
+                            <span style="width: 50px;">dcnjgadiygdu-hcgdaysdgduaiyagasouast68r5e4w53</span>
+                            <i class="bi bi-copy" ></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div   class="border rounded h-auto p-4" style="width: 450px; margin-top: 30px;" >
+                <div class="d-flex align-items-center justify-content-between mt-2">
+                    <span>Min Deposit</span>
+                    <span>0.1USDT</span>
+                </div>
+                <div class="d-flex align-items-center justify-content-between mt-2">
+                    <span>Deposit Confirmation</span>
+                    <span>1 block confirmation</span>
+                </div>
+                <div class="d-flex align-items-center justify-content-between mt-2">
+                    <span>Contract Address</span>
+                    <span>.....ught </span>
+                </div>
+            </div>
+        </div>
+
+        <button style="background-color: var(--color-primary);  width: 450px;"> <a href="/dashboard/paymentProof.html" style=" color: var(--color-bg); width: 450px;">Payment Proof</a></button>
+    </div>
+
+    <!-- FAQ card -->
+    <div class="col-12 col-md-6 d-flex flex-column align-items-center">
+      <div style="border: 1px solid var(--color-primary); padding: 10px; margin-bottom: 20px; width: 100%; max-width: 400px;">
+        <p class="fw-bold p-4">Frequently Asked Questions</p>
+        <div id="narrowAccordionItems" class="accordion"></div>
+      </div>
+      <div style="width: 100%; max-width: 400px;">
+        <div style="border: 1px solid var(--color-primary); padding: 10px;">
+          <p class="fw-bold">Dont Have any Crypto?</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <button style="background-color: var(--color-primary); color: var(--color-bg); width: 100px;"> <a href="/dashboard/buyCrypto.html" style=" color: var(--color-bg)">Buy</a></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+     <!--footer-->
+  <div id="footer"></div>
+   <!-- js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+   <script type="module" src="/component/dashNav/dashNav.js"></script>
+  <script src="/component/footer/footer.js"></script>
+  <script src="/utils/accordion.js"></script>
+  <script src="/utils/depositAccordionItems.js"></script>
+  <script src="/component/coinselect/coinSelect.js"></script>
+  <script src="/component/coinselect/coinDetails.js"></script>
+<script>
+  setupCoinSelect('selectedCoin', 'coinBtns',{ width: '450px' });
+   setupCoinDepositDetails('selectedCoin', 'coinBtns', { width: '450px' });
+</script>
+</body>
+</html>

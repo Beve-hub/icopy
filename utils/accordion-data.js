@@ -25,6 +25,9 @@ const accordionItems = [
   }
 ];
 
+
+
 // Initialize accordions with different IDs
 createAccordion('narrowAccordion', accordionItems);
 createAccordion('wideAccordion', accordionItems);
+

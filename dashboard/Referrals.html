@@ -13,11 +13,169 @@
     <div id="navbar"></div>
     
 
+    <!-- Hero Section -->
+     <section class="container py-5">
+  <div class="row align-items-center flex-column-reverse flex-md-row">
+    <div class="col-md-6 text-center text-md-start">
+      <p class="lead fs-2" >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do</p>
+      <p class="lead">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus consectetur, esse quae ratione quibusdam nulla accusantium! Aut aperiam nisi, impedit similique quis vitae corrupti veniam animi est dicta, tempore voluptatum?</p>
+
+      <div>
+        <a href="#get-started" class="btn" style="background-color: var(--color-primary); color: var(--color-bg);">lorem</a>
+      </div>
+    </div>
+
+    <div class="col-md-6 text-center">
+   <img
+      src="/assets/referral.png"
+      alt="MyCompany Logo"
+      class="img-fluid mb-2"
+      style="
+        position: relative;
+        z-index: 1;
+        display: block;
+        width: auto;
+        height: auto;
+      "
+    />
+</div>
+
+  </div>
+      </section>
+
+       <section class="container py-5">
+  <div class="d-grid d-lg-flex text-center gap-3">
+    
+    <div class="p-4 w-100 h-100 flex-fill">
+        <img src="/assets/share.png" alt="">
+      <h3 class="fw-bold my-3">Lorem ipsum</h3>
+      <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i</p>
+    </div>
+
+    <div class="p-4 w-100 h-100 flex-fill">
+        <img src="/assets/chain.png" alt="">
+      <h3 class="fw-bold my-3">Lorem ipsum</h3>
+      <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i</p>
+    </div>
+
+    <div class="p-4 w-100 h-100 flex-fill">
+        <img src="/assets/checkbook.png" alt="">
+      <h3 class="fw-bold my-3">Lorem ipsum</h3>
+      <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i</p>
+    </div>
+
+   
+ 
+
+  </div>
+       </section>
+
+       
+
+       <section class="container my-5 rounded p-4 " style="border: 1px solid var(--color-secondary);">
+      
+         <!------ email link ---->
+        <div class="d-flex justify-content-between align-items-center p-4" style="border-bottom: 1px solid var(--color-text);">
+            <div>
+                <div>
+                    <p class="fw-bold">Invite your friends</p>
+                    <p >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+                </div>
+
+                <input type="email" class="form-control bg-transparent text-white mb-2" id="withdrawalAddress" placeholder="email Address">
+            </div>
+            <button style="background-color: var(--color-primary); color: var(--color-bg);">Withdrawal Funds</button>
+            
+        </div>
+
+
+        <!------ copy link ---->
+        <div class="d-flex justify-content-between align-items-end p-4">
+  <div>
+    <div>
+      <p class="fw-bold">Share the referral link</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+    </div>
+    <input type="text" class="form-control bg-transparent text-white mb-2" id="referralLinkInput" placeholder="Referral Link" value="https://www.icopytrader.com/referral/">
+  </div>
+  <button id="copyReferralBtn" style="background-color: var(--color-primary); color: var(--color-bg); width: 100px;">
+    <i class="bi bi-clipboard" style="color: var(--color-bg);"></i> copy
+  </button>
+</div>
+
+       </section>
+       
+       
+       
+       
+       <section class="container my-5 rounded p-4 " style="border: 1px solid var(--color-secondary);">
+        <div class="d-flex justify-content-between  align-items-center px-4" style="border-bottom: 2px solid  var(--color-text);">
+            <div>
+                <p class="fw-bold text-start">Referral </p>  
+                <p class=" text-center ">2</p>  
+            </div>
+
+            <div >
+                <p class="fw-bold text-start">Available Balance</p>  
+                <p class="  text-center" style="color: var(--color-primary);">$67,000.00</p>  
+            </div>
+        </div>
+        
+        <div>
+            <div class="d-flex justify-content-between my-4">
+                <div class=" d-flex gap-3">
+                    <img src="/assets/refdepth.png" alt="" style="width: 40px;">
+                    <div class="d-grid">
+                        <span>Referral Deposit</span>
+                        <span>$6894.98</span>
+                    </div>
+                </div>
+
+        </div>
+
+
+            <div class="d-flex justify-content-between ">
+                <div class=" d-flex gap-3">
+                    <img src="/assets/refdepth.png" alt="" style="width: 40px;">
+                    <div class="d-grid">
+                        <span>Bonus Earned</span>
+                        <span>$6894.98</span>
+                    </div>
+                </div>
+
+
+                <button style="background-color: var(--color-primary); color: var(--color-bg);">Withdrawal Funds</button>
+            </div>
+        </div>
+       </section>
+
+
+
+       <section class="container my-5 rounded " style="border: 1px solid var(--color-secondary);">
+  <p class="fw-bold text-start">Referral list</p>  
+   <deposit-table></deposit-table>
+       </section>
+
         <!--footer-->
   <div id="footer"></div>
    <!-- js -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
 <script type="module" src="/component/dashNav/dashNav.js"></script>
   <script src="/component/footer/footer.js"></script>
+  <script src="/utils/table.js"></script>
+  <script>
+  // Copy referral link to clipboard
+  document.getElementById('copyReferralBtn').addEventListener('click', function() {
+    const input = document.getElementById('referralLinkInput');
+    input.select();
+    input.setSelectionRange(0, 99999); // For mobile devices
+    document.execCommand('copy');
+    // Optional: show feedback
+    this.innerHTML = '<i class="bi bi-clipboard-check" style="color: var(--color-bg);"></i> copied';
+    setTimeout(() => {
+      this.innerHTML = '<i class="bi bi-clipboard" style="color: var(--color-bg);"></i> copy';
+    }, 1500);
+  });
+</script>
 </body>
 </html>

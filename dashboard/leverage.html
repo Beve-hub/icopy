@@ -13,6 +13,383 @@
     <div id="navbar"></div>
 
 
+
+    <section class="container py-4">
+
+       <ul class="nav nav-tabs gap-2" id="tradeTabs" role="tablist" style="display: flex; justify-content: center; align-items: center; margin: 30px;">
+        <li class="nav-item py-4" role="presentation">
+          <button class="nav-links text-white  active" id="crypto-tab" data-bs-toggle="tab" data-bs-target="#crypto" type="button" role="tab" style="background-color: transparent;">Crypto</button>
+        </li>
+        <li class="nav-item py-4" role="presentation">
+          <button class="nav-links text-white" id="forex-tab" data-bs-toggle="tab" data-bs-target="#forex" type="button" role="tab" style="background-color: transparent;">Forex</button>
+        </li>
+        <li class="nav-item py-4" role="presentation">
+          <button class="nav-links text-white" id="stocks-tab" data-bs-toggle="tab" data-bs-target="#stocks" type="button" role="tab" style="background-color: transparent;">Stocks</button>
+        </li>
+      </ul>
+      
+      <div class="tab-content p-3 border border-top-0" id="tradeTabsContent">
+        <div class="tab-pane fade show active" id="crypto" role="tabpanel">
+          <div id="cryptoWidget"></div>
+        </div>
+        <div class="tab-pane fade" id="forex" role="tabpanel">
+          <div id="forexWidget"></div>
+        </div>
+        <div class="tab-pane fade" id="stocks" role="tabpanel">
+          <div id="stocksWidget"></div>
+        </div>
+      </div>
+    </section>
+
+
+    <!---trade section---->
+    <section class="container py-4">
+      <div class="row g-4 align-items-start flex-column flex-md-row my-4">
+
+        <!------left ---->
+        <div class="col-12 col-md-6  rounded gap-3" >
+   
+          <div class="p-4 rounded"  style="background-color: var(--color-back); border: 1px solid var(--color-primary); margin-bottom: 20px; ">
+
+            <div>
+              <label for="" class="fw-bold py-2">Amount (max. $0.00)</label>
+              <div class="input-group flex-nowrap border rounded" style="background-color: transparent;">
+              <span class="input-group-text" id="addon-wrapping" style="background-color: var(--color-red); color: var(--color-text);">USD</span>
+              <span class="input-group-text" style="background-color: transparent; color: var(--color-text); border:none;">$</span>
+              <input type="number" class="form-control " 
+              placeholder="0.00" aria-label="Username" aria-describedby="addon-wrapping" 
+              style="background: transparent; color: #fff; border: none;">
+            </div>
+            </div>
+
+            <div class="my-2">
+              <label for="" class="fw-bold py-2 ">Leverage (1x - 20x)</label>
+            <input type="number" class="form-control " 
+              placeholder="0.00" aria-label="Username" aria-describedby="addon-wrapping" 
+              style="background: transparent; color: #fff; ">
+            </div>
+
+            <div class="my-2">
+              <label for="" class="fw-bold py-2 ">Price</label>
+            <input type="number" class="form-control " 
+              placeholder="0.00" aria-label="Username" aria-describedby="addon-wrapping" 
+              style="background: transparent; color: #fff; ">
+            </div>
+
+            <div class="d-grid justify-content-center align-items-center gap-2">
+              <button  style="background-color: var(--color-primary); color:var(--color-bg); width: 200px;">Buy</button>
+              <button  style="background-color: var(--color-red); color:var(--color-bg); width: 200px;">Sell</button>
+            </div>
+
+          </div>
+
+           <div class="p-4 rounded"  style="background-color: var(--color-back); border: 1px solid var(--color-primary); ">
+
+            <div class="d-flex gap-2 justify-content-center align-items-center">
+             <button class="border" style="background-color: transparent; color: var(--color-text); width: 100px;">Open</button>
+             <button class="border" style="background-color: transparent; color: var(--color-text); width: 100px;">Close</button>
+            </div>
+
+            <div>
+              <div class="d-flex justify-content-between p-2" style="border-bottom: 1px solid var(--color-text);">
+                <span>Symbol</span>
+                <span>34</span>
+              </div>
+
+              <div class="d-flex justify-content-between p-2" style="border-bottom: 1px solid var(--color-text);">
+                <span>Amount</span>
+                <span>34</span>
+              </div>
+
+              <div class="d-flex justify-content-between p-2" style="border-bottom: 1px solid var(--color-text);">
+                <span>Leverage</span>
+                <span>34</span>
+              </div>
+
+              <div class="d-flex justify-content-between p-2" style="border-bottom: 1px solid var(--color-text);">
+                <span>Time</span>
+                <span>34</span>
+              </div>
+
+              <div class="d-flex justify-content-between p-2" style="border-bottom: 1px solid var(--color-text);">
+                <span>Entry</span>
+                <span>34</span>
+              </div>
+
+              <div class="d-flex justify-content-between p-2" style="border-bottom: 1px solid var(--color-text);">
+                <span>Exit</span>
+                <span>34</span>
+              </div>
+
+              <div class="d-flex justify-content-between p-2" style="border-bottom: 1px solid var(--color-text);">
+                <span>Revenue</span>
+                <span>34</span>
+              </div>
+
+              <div class="d-flex justify-content-between p-2" style="border-bottom: 1px solid var(--color-text);">
+                <span>Date</span>
+                <span>34</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!------right ---->
+        <div class="col-12 col-md-6 p-2 rounded " style="background-color: var(--color-back); border: 1px solid var(--color-primary); ">
+    <ul class="nav  gap-2" id="tradeTabs" role="tablist" style="display: flex; justify-content: center; align-items: center; margin: 30px;">
+      <li class="nav-item py-4" role="presentation">
+        <button 
+          class="nav-links active text-white" 
+          id="cryptos-tab" 
+          data-bs-toggle="tab" 
+          data-bs-target="#cryptos" 
+          type="button" 
+          role="tab"
+          style="background-color: transparent; color: var(--color-text); border: 1px solid var(--color-text);"
+        >Crypto</button>
+      </li>
+      <li class="nav-item py-4" role="presentation">
+        <button 
+          class="nav-links text-white" 
+          id="forexs-tab" 
+          data-bs-toggle="tab" 
+          data-bs-target="#forexs" 
+          type="button" 
+          role="tab"
+          style="background-color: transparent; color: var(--color-text); border: 1px solid var(--color-text);"
+        >Forex</button>
+      </li>
+    </ul>
+      
+
+    <div>
+        <div id="">
+            <div class="d-flex gap-2 pb-3 justify-content-center " style="border-bottom: 1px solid var(--color-text); ">
+              <span>Limit</span>
+              <span>Market</span>
+              <span>Trigger</span>
+            </div>
+
+            <div>
+              <div class="p-2 d-flex justify-content-between" >
+                <p>Available</p>
+                <p>0.00USDT</p>
+              </div>
+
+              <div class="d-flex justify-content-between align-items-center rounded m-4" style="border: 1px solid var(--color-primary);  ">
+                <div class="d-grid p-2">
+                  <span>Order Price</span>
+                  <span class="fw-bold">189,837.7</span>
+                </div>
+                <div class="gap-2 " style="display: flex; justify-content: end; align-items: end;">
+                  <div class="d-flex gap-2">
+                    <p>Last</p>
+                    <p>USDT</p>
+                  </div>
+                  <div class="d-grid">
+                    <a class="border d-flex justify-content-center align-items-center" style="width: 30px; height: 30px; ">+</a>
+                    <a class="border d-flex justify-content-center align-items-center" style="width: 30px; height: 30px; ">-</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="d-flex justify-content-between align-items-end rounded m-4" style="border: 1px solid var(--color-primary);  ">
+                <div class="d-grid p-2">
+                  <span>Quantity</span>
+                  <span class="fw-bold text-center">000</span>
+                </div>
+                 <div class="d-flex p-2">
+                    <p>BTC</p>
+                  </div>
+              </div>
+            </div>
+          </div>
+    </div>
+     
+      <div class="m-4 py-4" style=" border-bottom: 1px solid var(--color-text);">
+
+    <div class="m-4 " >
+        <div class="range-container" id="percentRangeBar">
+          <div class="custom-thumb" id="customThumb"></div>
+      <div class="range-progress"></div>
+      <input  type="range"  class="form-range" min="10"  max="50" step="10" id="percentRange" />
+      <div class="range-labels py-2">
+        <span>10%</span>
+        <span>20%</span>
+        <span>30%</span>
+        <span>40%</span>
+        <span>50%</span>
+      </div>
+     </div>
+    </div>
+
+
+
+     </div>
+
+     <div class="m-4 ">
+      <div class="d-flex justify-content-center gap-2">
+        <button style="background-color: var(--color-primary); color: var(--color-bg); width: 100px;">Open Long</button>
+        <button style=" background-color: transparent; border: 1px solid var(--color-text); color: var(--color-text); width: 100px;">Short Long</button>
+      </div>
+
+      <div class="py-3" style="border-bottom: 1px solid var(--color-text);">
+        <div class="d-flex justify-content-between align-items-center py-2">
+          <span>Lorem ipsum dolor sit</span>
+          <span>098</span>
+        </div>
+        <div class="d-flex justify-content-between align-items-center py-2">
+          <span>Lorem ipsum dolor sit</span>
+          <span>098</span>
+        </div>
+        <div class="d-flex justify-content-between align-items-center py-2">
+          <span>Lorem ipsum dolor sit</span>
+          <span>098</span>
+        </div>
+        <div class="d-flex justify-content-between align-items-center py-2">
+          <span>Lorem ipsum dolor sit</span>
+          <span>098</span>
+        </div>
+      </div>
+     </div>
+
+     <div class="m-4 d-flex justify-content-between gap-2 py-2" style="border-bottom: 1px solid var(--color-text);">
+      <div class=" d-flex gap-3">
+        <img src="/assets/BNB-icon.png" alt="" style="width: 40px; height: 40px;">
+        <div class="d-grid ">
+          <span class="fw-bold">0000000BTC</span>
+          <span>$0.00</span>
+        </div>
+       </div>
+
+     <p class="">
+        0TH/S
+     </p>
+     </div>
+
+     <div class="m-4 ">
+      <p class="fw-bold">Margin</p>
+
+      <div  style="border-bottom: 1px solid var(--color-text);">
+        <div class="d-flex justify-content-between align-items-center py-2">
+          <span>Lorem ipsum dolor sit</span>
+          <span>000</span>
+        </div>
+        <div class="d-flex justify-content-between align-items-center py-2">
+          <span>Lorem ipsum dolor sit</span>
+          <span>000</span>
+        </div>
+        <div class="d-flex justify-content-between align-items-center py-2">
+          <span>Lorem ipsum dolor sit</span>
+          <span>000</span>
+        </div>
+      
+      </div>
+     </div>
+
+     <div class="m-4 ">
+      <div class="d-grid justify-content-center gap-2">
+        <button style="background-color: var(--color-primary); color: var(--color-bg); width: 200px;">Lorem ipsum </button>
+      </div>
+
+      <div class="py-3" >
+        <p class="fw-bold">Assest</p>
+        <div class="d-flex justify-content-between align-items-center py-2">
+          <span>Lorem ipsum dolor sit</span>
+          <span>098</span>
+        </div>
+        <div class="d-flex justify-content-between align-items-center py-2">
+          <span>Lorem ipsum dolor sit</span>
+          <span>098</span>
+        </div>
+        <div class="d-flex justify-content-between align-items-center py-2">
+          <span>Lorem ipsum dolor sit</span>
+          <span>098</span>
+        </div>
+        <div class="d-flex justify-content-between align-items-center py-2">
+          <span>Lorem ipsum dolor sit</span>
+          <span>098</span>
+        </div>
+      </div>
+
+      <div class="d-flex justify-content-center gap-2">
+        <button style="background-color: var(--color-primary); color: var(--color-bg); width: 100px;">Deposit</button>
+        <button style=" background-color: var(--color-red); color: var(--color-text); width: 100px;">Transfer</button>
+      </div>
+     </div>
+        </div>
+
+
+
+
+      </div>
+    </section>
+
+    <section class="container ">
+        <div class="d-flex justify-content-center  ">
+          <button id="submitProofBtn" style="background-color: var(--color-primary); margin-bottom: 10px; margin-top: 10px; color: var(--color-bg);">
+  CFD Trading Agreement
+</button>
+          
+        </div>
+
+          <!-- Modal -->
+<div class="modal fade" id="thankYouModal" tabindex="-1" aria-labelledby="thankYouModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" style="max-width:900px; width:90vw; margin:1.75rem auto;">
+    <div class="modal-content border" style="background-color: var(--color-back); border-color: var(--color-primary);">
+      <div class="modal-header">
+        <h5 class="modal-title fs-5 fw-bold " id="thankYouModalLabel">My Contracts</h5>
+        <button type="button" class="btn-close align-self-end" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-start">
+       <span class="fw-bold">Lorem ipsum</span> 
+       <span>
+          Lorem ipsum dolor sit amet. Excepteur sint occaecat cupidatat non proident. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+       </span>
+       <br/>
+       <span class="fw-bold">Lorem ipsum</span> 
+       <br/>
+       <span>
+          Lorem ipsum dolor sit amet. consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident. 
+       </span>
+       <br/>
+       <span class="fw-bold">Lorem ipsum</span> 
+       <br/>
+       <span>
+          Lorem ipsum dolor sit amet. consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident. 
+       </span>
+       <br/>
+       <span class="fw-bold">Lorem ipsum</span> 
+       <br/>
+       <span>
+          Lorem ipsum dolor sit amet. consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident. 
+       </span>
+       <br/>
+       <span class="fw-bold">Lorem ipsum</span> 
+       <br/>
+       <span>
+          Lorem ipsum dolor sit amet. consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident. 
+       </span>
+      </div>
+        <div class="p-3" style="display: flex; justify-content: start; align-items: center;">
+          <!-- Checkbox for agreement -->
+          <div class="form-check d-flex justify-content-start align-items-center gap-2">
+            <input class="form-check-input" type="checkbox" value="" id="agreementCheckbox" style="color: var(--color-bg);">
+            <label class="form-check-label" for="agreementCheckbox">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.
+            </label>
+          </div>
+         
+          </div>
+        <div class="py-2" style="display: flex; justify-content: center; align-items: center;">
+          <button style="background-color: var(--color-primary); color: var(--color-bg); width: 200px;">Agree</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    </section>
     
      <!--footer-->
   <div id="footer"></div>
@@ -20,5 +397,39 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
 <script type="module" src="/component/dashNav/dashNav.js"></script>
   <script src="/component/footer/footer.js"></script>
+  <script type="module" src="/utils/tradeWidget.js"></script>
+<script>
+  const range = document.getElementById("percentRange");
+  const rangeProgress = document.querySelector("#percentRangeBar .range-progress");
+  const customThumb = document.getElementById("customThumb");
+
+  function updateRangeProgress(el) {
+    const min = +el.min;
+    const max = +el.max;
+    const val = +el.value;
+    const percent = ((val - min) / (max - min)) * 100;
+    rangeProgress.style.width = percent + "%";
+
+    // Position the custom thumb
+    const sliderWidth = el.offsetWidth;
+    const thumbWidth = customThumb.offsetWidth;
+    // Calculate left position for thumb (account for thumb width)
+    const left = (percent / 100) * (sliderWidth - thumbWidth) + thumbWidth / 2;
+    customThumb.style.left = `${left}px`;
+  }
+
+  if (range && rangeProgress && customThumb) {
+    range.addEventListener("input", (e) => updateRangeProgress(e.target));
+    window.addEventListener("resize", () => updateRangeProgress(range));
+    updateRangeProgress(range);
+  }
+</script>
+
+<script>
+  document.getElementById('submitProofBtn').addEventListener('click', function() {
+    var myModal = new bootstrap.Modal(document.getElementById('thankYouModal'));
+    myModal.show();
+  });
+</script>
 </body>
 </html>

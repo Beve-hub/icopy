@@ -43,11 +43,11 @@ footer {
 section {
   padding: 1em;
   margin: 0 auto;
-  max-width: 1600px;
+  max-width: 1200px;
   background-color: var(--color-bg);
   display: flex;
   flex-direction: column;
-
+justify-content: center;
   padding: auto 20px;
 }
 .container {
@@ -251,6 +251,35 @@ button:hover, input:hover, textarea:hover, select:hover {
   color: var(--color-bg) !important;
   font-weight: 500;
   border: none;
+}
+
+.profile-tabs {
+  display: grid;
+  justify-content: center;
+  gap: 25px;
+  list-style: none;
+  padding: 0;
+  margin-bottom: 2rem;
+}
+
+
+
+.profile-tab-link {
+  display: block;
+  padding: 8px 20px;
+  color: var(--color-text);
+  background: transparent;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+  border: none;
+}
+
+.profile-tab-link.active,
+.profile-tab-link:focus,
+.profile-tab-link:hover {
+  background: var(--color-bg);
+  color: var(--color-text);
 }
 
 .accordion {

@@ -41,8 +41,8 @@ footer {
 }
 
 section {
-  padding: 1em;
-  margin: 0 auto;
+  
+  margin: 10px auto;
   max-width: 1200px;
   background-color: var(--color-bg);
   display: flex;
@@ -89,22 +89,33 @@ justify-content: center;
     height: 100vh;
   }
 
-  .auth-bg::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 0;
-  }
+  
+ .auth-bg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 
-  .auth-content {
-    position: relative;
-    z-index: 1;
-  }
+  z-index: 0;
+  pointer-events: none; 
+}
 
 
+.auth-content {
+  position: relative;
+  z-index: 1;
+}
+
+
+.form-control,
+.form-control:focus,
+.form-control:valid,
+.form-control:not(:placeholder-shown) {
+  background-color: transparent !important;
+  color: #fff; 
+}
   .last-bg {
     background-image: url('/assets/aboutimage5.png'); /* Replace with your image path */
     background-size: cover;
@@ -241,6 +252,13 @@ button:hover, input:hover, textarea:hover, select:hover {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23ffffff' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
+.nav-link {
+  display: inline-flex;
+  justify-content: center;
+  width: 100%;
+
+}
+
 .nav-link.active {
   color: var(--color-primary) !important;
   font-weight: 500;
@@ -359,6 +377,9 @@ button:hover, input:hover, textarea:hover, select:hover {
   background: var(--color-back);
   text-align: center;
 }
+.card-body {
+  padding: 1rem;
+}
 
 .pagination-dots {
   display: flex;
@@ -393,8 +414,8 @@ button:hover, input:hover, textarea:hover, select:hover {
 }
 
 .image-frame {
-  width: 150px;
-  height: 250px;
+  width: 200px;
+  height: 350px;
   transition: all 0.4s ease-in-out;
   cursor: pointer;
   border-radius: 12px;

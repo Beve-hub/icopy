@@ -2,8 +2,7 @@ const tradingTabsData = [
   {
     id: "copy",
     title: "Copy Trading",
-    image: "/assets/feature1.png",
-    image2x: "/assets/feature1@2x.png",
+    image: "/assets/copy trading.png",
     alt: "Copy Trading Image",
     description: "Copy trade the pros in real-time. A powerful way to automate strategies.",
       label:"Copy Trading",
@@ -15,7 +14,7 @@ const tradingTabsData = [
     id: "forex",
     title: "Forex Trading",
     image: "/assets/feature1.png",
-    image2x: "/assets/feature1@2x.png",
+  
     alt: "Forex Trading Image",
     description: "Trade major currency pairs with tight spreads and high liquidity.",
        label:"Forex Trading",
@@ -28,7 +27,7 @@ const tradingTabsData = [
     id: "stocks",
     title: "Stocks Trading",
     image: "/assets/feature1.png",
-    image2x: "/assets/feature1@2x.png",
+   
     alt: "Stocks Trading Image",
     description: "Invest in global equities with advanced tools and low fees.",
     label:"Stocks Trading",
@@ -40,7 +39,7 @@ const tradingTabsData = [
     id: "crypto",
     title: "Crypto Trading",
     image: "/assets/feature1.png",
-    image2x: "/assets/feature1@2x.png",
+
     alt: "Crypto Trading Image",
     description: "Buy and sell top cryptocurrencies with high security and speed.",
    label:"Crypto Trading",

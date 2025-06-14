@@ -56,8 +56,30 @@ justify-content: center;
   padding: 1em;
  
 }
+
+.bell-dropdown .nav-link {
+  background-color: transparent;
+  color: var(--color-text);
+  border: none;
+}
+
+.bell-dropdown .nav-link.active {
+  background-color: var(--color-primary);
+  color: var(--color-back);
+}
+.bell-dropdown .nav-link.active {
+  background-color: var(--color-primary);
+  color: var(--color-back) !important;
+}
+
+  .dropdown-menu {
+    background: var(--color-back) !important;
+    border: 1px solid var(--color-primary) !important;
+    color: var(--color-back);
+  }
+
 .hero-bg {
-    background-image: url('/assets/aboutimage.png'); /* Replace with your image path */
+    background-image: url('/assets/aboutimage.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -280,8 +302,6 @@ button:hover, input:hover, textarea:hover, select:hover {
   margin-bottom: 2rem;
 }
 
-
-
 .profile-tab-link {
   display: block;
   padding: 8px 20px;
@@ -358,7 +378,7 @@ button:hover, input:hover, textarea:hover, select:hover {
   scroll-snap-type: x mandatory;
   -ms-overflow-style: none;
   scrollbar-width: none;
-  width: calc(250px * 3 + 2rem);
+  width: calc(450px * 3 + 2rem);
   max-width: 100%;
   margin: 0 auto;
 }

@@ -25,50 +25,75 @@
   <a href="#" class="text-secondary" title="Balance" id="briefDropdown" data-bs-toggle="dropdown" aria-expanded="false">
     <i class="bi bi-briefcase fs-5"></i>
   </a>
-  <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="briefDropdown" style="background-color: var(--color-back); color: var(--color-text); ">
-    <li><span class="dropdown-item-text">Balance: $1234.56</span></li>
-    <div class="d-grid mt-3">
+  <ul class="dropdown-menu dropdown-menu-end p-4" aria-labelledby="briefDropdown" style="width: 300px; background-color: var(--color-back); color: var(--color-text); border: 1px solid var(--color-primary);">
+    <div>
+      <img src="/assets/money-bag.png" alt="" style="width: 30px; height: 30px;">
+      <div class="d-flex flex-column gap-1 mt-2">
+        <span class="text-white fw-bold">Total Assets</span>
+      <span class="text-white fs-2 fw-bold">1234.56USDT</span>
+      <span class="text-white">~$1234.56</span>
+      </div>
+      
+    </div>
+    <div class="d-grid m-4">
         <button class="btn" style="background-color: var(--color-primary); color: black; ">Overview</button>
       </div>
   </ul>
-</div>
+          </div>
 
 <!-- BELL DROPDOWN WITH SUBTABS -->
-<div class="dropdown">
+<div class="dropdown bell-dropdown">
   <a href="#" class="text-secondary position-relative" title="Notifications" id="bellDropdown" data-bs-toggle="dropdown" aria-expanded="false">
     <i class="bi bi-bell fs-5"></i>
-    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="font-size:0.6em;">3</span>
+    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill" style="font-size:0.6em; color: var(--color-back); background-color: var(--color-primary);">6</span>
   </a>
-  <div class="dropdown-menu dropdown-menu-end p-0" style="width: 450px; background: black; border: 2px solid var(--color-primary); color: var(--color-back);">
-    <ul class="nav nav-tabs nav-fill border-bottom flex-row" id="notifTabs" style="background: var(--color-back);">
-      <li class="nav-item">
-        <a class="nav-link " href="#" data-target="alerts" style="color: black;">Alerts</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#" data-target="messages" style="color: black;">Messages</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#" data-target="balance" style="color: black;">balance</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#" data-target="account" style="color: black;">account</a>
-      </li>
-    </ul>
-    <div id="notifContent" class="p-3">
-      <div class="notif-pane" id="alerts" style="color: var(--color-back);">No new alerts.</div>
-      <div class="notif-pane d-none" id="messages" style="color: var(--color-back);">No new messages.</div>
-      <div class="notif-pane" id="balance" style="color: var(--color-back);">No new alerts.</div>
-      <div class="notif-pane d-none" id="account" style="color: var(--color-back);">No new messages.</div>
+
+  <div class="dropdown-menu dropdown-menu-end p-0" aria-labelledby="bellDropdown" style="min-width: 450px; background: black; border: 2px solid var(--color-primary); color: var(--color-back);">
+    <div class="tab-container border rounded">
+      <ul class="nav nav-tabs m-4" id="bellTab" role="tablist" style="background: var(--color-back);">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#alerts" type="button" role="tab" aria-controls="alerts" aria-selected="true">Alerts</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" data-bs-toggle="tab" data-bs-target="#messages" type="button" role="tab" aria-controls="messages" aria-selected="false">Messages</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" data-bs-toggle="tab" data-bs-target="#balance" type="button" role="tab" aria-controls="balance" aria-selected="false">Balance</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" data-bs-toggle="tab" data-bs-target="#account" type="button" role="tab" aria-controls="account" aria-selected="false">Account</button>
+        </li>
+      </ul>
+
+      <div id="bellTabContent" class="p-3 tab-content">
+        <div class="notif-pane tab-pane fade show active" id="alerts" role="tabpanel" aria-labelledby="alerts-tab">
+          <ul class="list-unstyled">
+            <li class="mb-2"><i class="bi bi-circle-fill" style="color: var(--color-primary); font-size: 0.6rem;"></i> Alert 1: System update scheduled for tonight.</li>
+            <li class="mb-2"><i class="bi bi-circle-fill" style="color: var(--color-primary); font-size: 0.6rem;"></i> Alert 2: New security policy implemented.</li>
+            <li class="mb-2"><i class="bi bi-circle-fill" style="color: var(--color-primary); font-size: 0.6rem;"></i> Alert 3: Scheduled maintenance on the server.</li>
+          </ul>
+        </div>
+        <div class="notif-pane tab-pane fade" id="messages" role="tabpanel" aria-labelledby="messages-tab">No new messages.</div>
+        <div class="notif-pane tab-pane fade" id="balance" role="tabpanel" aria-labelledby="balance-tab">
+          <ul class="list-unstyled">
+            <li class="mb-2"><i class="bi bi-circle-fill" style="color: var(--color-primary); font-size: 0.6rem;"></i> Alert 1: System update scheduled for tonight.</li>
+            <li class="mb-2"><i class="bi bi-circle-fill" style="color: var(--color-primary); font-size: 0.6rem;"></i> Alert 2: New security policy implemented.</li>
+            <li class="mb-2"><i class="bi bi-circle-fill" style="color: var(--color-primary); font-size: 0.6rem;"></i> Alert 3: Scheduled maintenance on the server.</li>
+          </ul>
+        </div>
+        <div class="notif-pane tab-pane fade" id="account" role="tabpanel" aria-labelledby="account-tab">No new messages.</div>
+      </div>
     </div>
   </div>
 </div>
+
         
           <div>
             <a href="#" class="text-danger" title="Logout" id="logoutBtn">
               <i class="bi bi-box-arrow-right fs-5"></i>
              </a>
           </div>
-        `
+        
         </div>
         
       </div>
@@ -83,22 +108,90 @@
   <div class="collapse navbar-collapse d-lg-none" id="navbarContent">
     <div class="d-flex flex-column gap-3 mt-3 px-2">
        <div class="d-flex gap-4">
-        <a href="#" class="text-secondary" title="Balance">
-          <i class="bi bi-briefcase fs-5"></i>
-        </a>
-        <a href="#" class="text-secondary position-relative" title="Notifications">
-          <i class="bi bi-bell fs-5"></i>
-          <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="font-size:0.6em;">3</span>
-        </a>
+
+        <!---Language Selector--->
+        <div>
+          <select class="form-select form-select-sm w-auto bg-dark text-white" id="languageSelect">
+          <option  class="bg-dark text-white" value="en" >English</option>
+          <option  class="bg-dark text-white" value="es" >Spanish</option>
+          <option  class="bg-dark text-white" value="fr" >French</option>
+        </select>
+        </div>
+        
+
+
+        <!-- balance  -->
+        <div class="dropdown">
+  <a href="#" class="text-secondary" title="Balance" id="briefDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+    <i class="bi bi-briefcase fs-5"></i>
+  </a>
+  <div class="dropdown-menu dropdown-menu-center p-4" aria-labelledby="briefDropdown" style="width: 300px; background-color: var(--color-bg); color: var(--color-text); border: 1px solid var(--color-primary);">
+    <div>
+      <img src="/assets/money-bag.png" alt="" style="width: 30px; height: 30px;">
+      <div class="d-flex flex-column gap-1 mt-2">
+        <span class="text-white fw-bold">Total Assets</span>
+      <span class="text-white fs-2 fw-bold">1234.56USDT</span>
+      <span class="text-white">~$1234.56</span>
+      </div>
+      
+    </div>
+    <div class="d-grid m-4">
+        <button class="btn" style="background-color: var(--color-primary); color: black; ">Overview</button>
+      </div>
+    </div>
+          </div>
+
+        <!---Bell Icon with Badge--->
+        <div class="dropdown bell-dropdown">
+  <a href="#" class="text-secondary position-relative" title="Notifications" id="bellDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+    <i class="bi bi-bell fs-5"></i>
+    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill" style="font-size:0.6em; color: var(--color-back); background-color: var(--color-primary);">6</span>
+  </a>
+
+  <div class="dropdown-menu dropdown-menu-center p-0" aria-labelledby="bellDropdown" style="min-width: 250px; background: black; border: 2px solid var(--color-primary); color: var(--color-back);">
+    <div class="tab-container border rounded">
+      <ul class="nav nav-tabs m-4" id="bellTab" role="tablist" style="background: var(--color-back);">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#alerts" type="button" role="tab" aria-controls="alerts" aria-selected="true">Alerts</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" data-bs-toggle="tab" data-bs-target="#messages" type="button" role="tab" aria-controls="messages" aria-selected="false">Messages</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" data-bs-toggle="tab" data-bs-target="#balance" type="button" role="tab" aria-controls="balance" aria-selected="false">Balance</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" data-bs-toggle="tab" data-bs-target="#account" type="button" role="tab" aria-controls="account" aria-selected="false">Account</button>
+        </li>
+      </ul>
+
+      <div id="bellTabContent" class="p-3 tab-content">
+        <div class="notif-pane tab-pane fade show active" id="alerts" role="tabpanel" aria-labelledby="alerts-tab">
+          <ul class="list-unstyled">
+            <li class="mb-2"><i class="bi bi-circle-fill" style="color: var(--color-primary); font-size: 0.6rem;"></i> Alert 1: System update scheduled for tonight.</li>
+            <li class="mb-2"><i class="bi bi-circle-fill" style="color: var(--color-primary); font-size: 0.6rem;"></i> Alert 2: New security policy implemented.</li>
+            <li class="mb-2"><i class="bi bi-circle-fill" style="color: var(--color-primary); font-size: 0.6rem;"></i> Alert 3: Scheduled maintenance on the server.</li>
+          </ul>
+        </div>
+        <div class="notif-pane tab-pane fade" id="messages" role="tabpanel" aria-labelledby="messages-tab">No new messages.</div>
+        <div class="notif-pane tab-pane fade" id="balance" role="tabpanel" aria-labelledby="balance-tab">
+          <ul class="list-unstyled">
+            <li class="mb-2"><i class="bi bi-circle-fill" style="color: var(--color-primary); font-size: 0.6rem;"></i> Alert 1: System update scheduled for tonight.</li>
+            <li class="mb-2"><i class="bi bi-circle-fill" style="color: var(--color-primary); font-size: 0.6rem;"></i> Alert 2: New security policy implemented.</li>
+            <li class="mb-2"><i class="bi bi-circle-fill" style="color: var(--color-primary); font-size: 0.6rem;"></i> Alert 3: Scheduled maintenance on the server.</li>
+          </ul>
+        </div>
+        <div class="notif-pane tab-pane fade" id="account" role="tabpanel" aria-labelledby="account-tab">No new messages.</div>
+      </div>
+    </div>
+  </div>
+</div>
+        
        <div class="dropdown">
         <a href="#" class="d-flex align-items-center text-decoration-none dropdown-toggle" id="userDropdownMobile" data-bs-toggle="dropdown" aria-expanded="false">
          <i class="bi bi-person-circle" style="font-size: 1.5rem;"></i>
         </a>
-        <ul class="dropdown-menu " aria-labelledby="userDropdownMobile">
-          <li><a class="dropdown-item" href="#">Profile</a></li>
-          <li><a class="dropdown-item" href="#">Settings</a></li>
-        </ul>
-        
+       
       </div>
       <a href="#" class="text-danger" title="Logout" id="logoutBtnMobile">
           <i class="bi bi-box-arrow-right fs-5"></i>

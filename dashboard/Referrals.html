@@ -15,17 +15,17 @@
 
     <!-- Hero Section -->
      <section class="container py-5">
-  <div class="row align-items-center flex-column-reverse flex-md-row">
-    <div class="col-md-6 text-center text-md-start">
-      <p class="lead fs-2" >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do</p>
-      <p class="lead">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus consectetur, esse quae ratione quibusdam nulla accusantium! Aut aperiam nisi, impedit similique quis vitae corrupti veniam animi est dicta, tempore voluptatum?</p>
+  <div class="row align-items-center flex-column flex-md-row">
+    <div class="col-md-6 text-start text-md-start">
+      <p class="lead fs-2 text-start fw-bold " >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do</p>
+      <p class="lead text-start">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus consectetur, esse quae ratione quibusdam nulla accusantium! Aut aperiam nisi, impedit similique quis vitae corrupti veniam animi est dicta, tempore voluptatum?</p>
 
-      <div>
-        <a href="#get-started" class="btn" style="background-color: var(--color-primary); color: var(--color-bg);">lorem</a>
+      <div class="mb-3">
+        <a href="#get-started" class="btn" style="background-color: var(--color-primary); color: var(--color-bg); width:200px;">Trade Now</a>
       </div>
     </div>
 
-    <div class="col-md-6 text-center">
+    <div class="col-md-6 text-center d-flex justify-content-center align-items-center">
    <img
       src="/assets/referral.png"
       alt="MyCompany Logo"
@@ -34,8 +34,8 @@
         position: relative;
         z-index: 1;
         display: block;
-        width: auto;
-        height: auto;
+        width: 80%;
+        height: 80%;
       "
     />
 </div>
@@ -75,32 +75,38 @@
        <section class="container my-5 rounded p-4 " style="border: 1px solid var(--color-secondary); background-color: var(--color-back);">
       
          <!------ email link ---->
-        <div class="d-flex justify-content-between align-items-center p-4" style="border-bottom: 1px solid var(--color-text);">
-            <div>
+        <div class="row align-items-center flex-column flex-md-row p-4" style="border-bottom: 1px solid var(--color-text);">
+            <div class=" col-md-6 text-start text-md-start">
                 <div>
                     <p class="fw-bold">Invite your friends</p>
                     <p >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
                 </div>
-
-                <input type="email" class="form-control bg-transparent text-white mb-2" id="withdrawalAddress" placeholder="email Address">
+                  <div class="d-flex align-items-center text-center gap-2">
+                    <input type="email" class="form-control bg-transparent text-white mb-2" id="withdrawalAddress" placeholder="email Address">
+                    <button  class="mb-2" style="background-color: var(--color-primary); color: var(--color-bg); width: auto;">Invite</button>
+                  </div>
+                
             </div>
-            <button style="background-color: var(--color-primary); color: var(--color-bg);">Withdrawal Funds</button>
+
             
         </div>
 
 
         <!------ copy link ---->
         <div class="d-flex justify-content-between align-items-end p-4">
-  <div>
-    <div>
+  <div style=" display: grid; align-items: center; justify-content: center;">
+    <div >
       <p class="fw-bold">Share the referral link</p>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
     </div>
-    <input type="text" class="form-control bg-transparent text-white mb-2" id="referralLinkInput" placeholder="Referral Link" value="https://www.icopytrader.com/referral/">
-  </div>
-  <button id="copyReferralBtn" style="background-color: var(--color-primary); color: var(--color-bg); width: 100px;">
-    <i class="bi bi-clipboard" style="color: var(--color-bg);"></i> copy
-  </button>
+    <div class="d-flex align-items-center text-center gap-2">
+      <input type="text" class="form-control bg-transparent text-white mb-2" id="referralLinkInput" placeholder="Referral Link" value="https://www.icopytrader.com/referral/">
+      <button class="mb-2" id="copyReferralBtn" style="background-color: var(--color-primary); color: var(--color-bg); width: auto">
+        <i class="bi bi-clipboard" style="color: var(--color-bg);"></i> 
+       </button>
+    </div>
+    </div>
+  
 </div>
 
        </section>

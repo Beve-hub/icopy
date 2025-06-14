@@ -74,15 +74,30 @@ function initDashNav() {
 document.addEventListener("DOMContentLoaded", () => {
   const tabs = document.querySelectorAll("#notifTabs .nav-link");
   const panes = document.querySelectorAll(".notif-pane");
+  const dropdownMenu = document.querySelector(".dropdown-menu");
+
+  // Prevent dropdown from closing when tab is clicked
+  dropdownMenu?.addEventListener("click", (e) => {
+    e.stopPropagation();
+  });
 
   tabs.forEach(tab => {
     tab.addEventListener("click", (e) => {
       e.preventDefault();
-      tabs.forEach(t => t.classList.remove("active"));
+      e.stopPropagation();
+
       tab.classList.add("active");
       const target = tab.getAttribute("data-target");
       panes.forEach(pane => {
         pane.classList.toggle("d-none", pane.id !== target);
+      });
+        const targetId = tab.getAttribute("data-target");
+      panes.forEach((pane) => {
+        if (pane.id === targetId) {
+          pane.classList.remove("d-none");
+        } else {
+          pane.classList.add("d-none");
+        }
       });
     });
   });

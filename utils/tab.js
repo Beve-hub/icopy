@@ -96,6 +96,7 @@ function renderTradingTabs(containerId, tabs) {
       .tabs-scroll-wrapper {
         overflow-x: auto;
         -webkit-overflow-scrolling: touch;
+        
       }
       .tabs-scroll-wrapper::-webkit-scrollbar {
         display: none;
@@ -109,7 +110,7 @@ function renderTradingTabs(containerId, tabs) {
           color: white;
           background-color: transparent;
           transition: all 0.3s ease;
-          margin: 20px 8px;
+          margin: 20px 0px;
         }
           .nav-index.active {
           background-color: var(--color-primary);
@@ -119,9 +120,10 @@ function renderTradingTabs(containerId, tabs) {
           @media (max-width: 600px) {
           .nav-index {
             font-size: 0.8rem;
-            padding: 10px 8px;
-            width: 150px;
+            width: 120px;
+
           }
+         
 }
     `;
     document.head.appendChild(style);

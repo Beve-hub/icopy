@@ -610,3 +610,9 @@ button:hover, input:hover, textarea:hover, select:hover {
       #card-container {
         grid-template-columns: repeat(4, 1fr);
       }}
+
+      @media (max-width: 600px) {
+  .pocket {
+    border: none !important;
+  }
+}

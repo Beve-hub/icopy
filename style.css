@@ -617,7 +617,7 @@ button:hover, input:hover, textarea:hover, select:hover {
   }
 
   .image-frame {
-  width: 150px;
+  width: 100px;
   height: 350px;
   transition: all 0.4s ease-in-out;
   cursor: pointer;

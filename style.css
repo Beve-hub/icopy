@@ -618,7 +618,7 @@ button:hover, input:hover, textarea:hover, select:hover {
 
   .image-frame {
   width: 100px;
-  height: 350px;
+  height: 250px;
   transition: all 0.4s ease-in-out;
   cursor: pointer;
   border-radius: 12px;

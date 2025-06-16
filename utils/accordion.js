@@ -1,35 +1,44 @@
-
-
+// accordion.js
 function createAccordion(containerId, items) {
   const container = document.getElementById(containerId);
-  if (!container) {
-    console.error(`Container with ID ${containerId} not found.`);
-    return;
-  }
+  if (!container) return;
 
-  container.innerHTML = items.map((item, index) => `
-    <div class="accordion-item">
-      <h2 class="accordion-header" id="panelsStayOpen-heading${containerId}-${index}">
-        <button 
-          class="accordion-button ${index === 0 ? '' : 'collapsed'}" 
-          type="button" 
-          data-bs-toggle="collapse" 
-          data-bs-target="#panelsStayOpen-collapse${containerId}-${index}" 
-          aria-expanded="${index === 0 ? 'true' : 'false'}" 
-          aria-controls="panelsStayOpen-collapse${containerId}-${index}"
-        >
-          ${item.title}
-        </button>
-      </h2>
-      <div 
-        id="panelsStayOpen-collapse${containerId}-${index}" 
-        class="accordion-collapse collapse ${index === 0 ? 'show' : ''}" 
-        aria-labelledby="panelsStayOpen-heading${containerId}-${index}"
-      >
-        <div class="accordion-body">
-          ${item.content}
-        </div>
-      </div>
-    </div>
-  `).join('');
+  container.innerHTML = '';
+
+  items.forEach((item, index) => {
+    const itemDiv = document.createElement('div');
+    itemDiv.className = 'accordion-item';
+
+    const header = document.createElement('div');
+    header.className = 'accordion-header';
+    header.setAttribute('data-index', index);
+
+    const icon = document.createElement('span');
+    icon.className = 'accordion-icon bi bi-plus';
+
+    const title = document.createElement('span');
+    title.className = 'accordion-title';
+    title.textContent = item.title;
+
+    const body = document.createElement('div');
+    body.className = 'accordion-body';
+    body.innerHTML = item.content;
+
+    header.appendChild(title);
+    header.appendChild(icon);
+    itemDiv.appendChild(header);
+    itemDiv.appendChild(body);
+    container.appendChild(itemDiv);
+
+    header.addEventListener('click', function () {
+      const isOpen = body.classList.toggle('open');
+      icon.className = isOpen ? 'accordion-icon bi bi-dash' : 'accordion-icon bi bi-plus';
+      title.classList.toggle('open', isOpen); 
+    });
+  });
 }
+
+document.addEventListener('DOMContentLoaded', function () {
+  createAccordion('narrowAccordion', accordionItems);
+  createAccordion('wideAccordion', accordionItems);
+});

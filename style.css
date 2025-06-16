@@ -353,6 +353,58 @@ button:hover, input:hover, textarea:hover, select:hover {
   transition: transform 0.2s ease-in-out;
 }
 
+/* accordion.css */
+.accordion-item {
+  border: 1px solid var(--color-secondary);
+  border-radius: 12px;
+  background: var(--color-back);
+  margin-bottom: 8px;
+  overflow: hidden;
+  
+}
+
+.accordion-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+ border-radius: 12px;
+ padding: 12px 16px;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--color-text);
+  
+}
+
+.accordion-icon {
+  margin-left: 12px;
+  font-size: 18px;
+}
+
+.accordion-title {
+  flex: 1;
+  border-radius: 12px;
+   color: var(--color-text);
+}
+
+.accordion-body {
+  border-radius: 12px;
+  background: var(--color-back);
+  font-size: 13px;
+  font-weight: 200;
+  display: none;
+  transition: all 0.3s ease;
+}
+
+.accordion-body.open {
+  display: block;
+  border-radius: 12px;
+}
+.accordion-title.open {
+  color: var(--color-primary);
+}
+
+
 .nav-pills .nav-link {
     border: 1px solid white;
     color: white;

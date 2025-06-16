@@ -3,7 +3,7 @@ cardData.forEach(card => {
     const cardElement = document.createElement('div');
     cardElement.className = 'col-md-4';
     cardElement.innerHTML = `
-        <div class="card m-3 position-relative" style="width: auto; background-color: var(--color-back); color: white;  cursor:pointer; ">
+        <div class="card m-3 position-relative" style="width: auto; color: white;  cursor:pointer; ">
             <div class="card-body">
                 <span class="badge position-absolute top-0 start-0 m-2 " style="background-color: #D4FF27; color: #121212; transform: rotate(90deg); transform-origin: top left;">${card.pack}</span>
                 <h5 class="card-title mt-4">${card.title}</h5>

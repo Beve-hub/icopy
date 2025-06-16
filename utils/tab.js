@@ -1,4 +1,4 @@
-// renderTabs.js
+
 function renderTradingTabs(containerId, tabs) {
   const container = document.getElementById(containerId);
 
@@ -93,18 +93,7 @@ function renderTradingTabs(containerId, tabs) {
     const style = document.createElement('style');
     style.id = 'tabs-scroll-style';
     style.textContent = `
-      .tabs-scroll-wrapper {
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
-        
-      }
-      .tabs-scroll-wrapper::-webkit-scrollbar {
-        display: none;
-      }
-      .tabs-scroll-wrapper {
-        -ms-overflow-style: none;
-        scrollbar-width: none;
-      }
+     
         .nav-index{
           border: 1px solid white;
           color: white;
@@ -119,10 +108,13 @@ function renderTradingTabs(containerId, tabs) {
 
           @media (max-width: 600px) {
           .nav-index {
-            font-size: 0.8rem;
-            width: 120px;
-
+            font-size: 0.7rem;
+            width: 100px;
           }
+           .tabs-scroll-wrapper {
+          flex-wrap: wrap;
+          justify-content: center;
+        }
          
 }
     `;

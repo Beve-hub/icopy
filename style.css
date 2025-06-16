@@ -1,5 +1,6 @@
 :root {
-  --font-family-base: 'Inter', Roboto, sans-serif;
+  --font-family-heading: 'Unbounded';
+  --font-family-base: 'Inter';
   --color-text: #ffffff;
   --color-bg: #000000;
   --color-back: #1f1e1e;
@@ -7,6 +8,9 @@
   --color-secondary: #9abe07;
   --color-red:#ff0000;
   --border-radius: 6px;
+  --border-color: #AEAEAE61;
+  --card-color:  #D9D9D917;
+  --font-size-base: 16px;
 }
 
 * {
@@ -130,6 +134,17 @@ justify-content: center;
   z-index: 1;
 }
 
+
+/* Custom sizing */
+.side-card {
+  width: 250px;
+  height: 250px;
+}
+
+.middle-card {
+  transform: scale(1.18);
+  z-index: 2;
+}
 
 .form-control,
 .form-control:focus,
@@ -370,7 +385,7 @@ button:hover, input:hover, textarea:hover, select:hover {
   cursor: pointer;
  border-radius: 12px;
  padding: 12px 16px;
-  font-size: 12px;
+  font-size: 16px;
   font-weight: 500;
   color: var(--color-text);
   
@@ -390,7 +405,7 @@ button:hover, input:hover, textarea:hover, select:hover {
 .accordion-body {
   border-radius: 12px;
   background: var(--color-back);
-  font-size: 13px;
+  font-size: 16px;
   font-weight: 200;
   display: none;
   transition: all 0.3s ease;
@@ -693,5 +708,11 @@ button:hover, input:hover, textarea:hover, select:hover {
 
 .image-frame.active:not(:hover) {
   width: 100px;
+}
+
+ .middle-card {
+  transform: scale(1);
+  z-index: 2;
+  margin: 10px 0;
 }
 }

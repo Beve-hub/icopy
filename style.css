@@ -14,6 +14,8 @@
   --border-color: #AEAEAE61;
   --card-color:  #D9D9D917;
   --font-size-base: 16px;
+  --footer-color: #19191A;
+  --footer-border: #282828;
 }
 
 * {
@@ -47,6 +49,8 @@ footer {
   margin-top: 50px;
 }
 
+
+
 section {
   
   margin: 10px auto;
@@ -63,6 +67,22 @@ justify-content: center;
   padding: 1em;
  
 }
+.navbar {
+    background-color: transparent !important;
+  }
+
+  
+
+  .dropdown-menu {
+    background-color: var(--color-bg); /* Override black default */
+    border: none;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  }
+
+  .nav-link,
+  .dropdown-item {
+    color: var(--color-text) !important;
+  }
 
 .bell-dropdown .nav-link {
   background-color: transparent;
@@ -92,8 +112,14 @@ justify-content: center;
     background-repeat: no-repeat;
     position: relative;
     height: 70vh;
+    
   }
 
+  .home-bg {
+    position: relative;
+    height: 60vh;
+   
+  }
   .hero-bg::before {
     content: '';
     position: absolute;
@@ -107,6 +133,14 @@ justify-content: center;
   .hero-content {
     position: relative;
     z-index: 1;
+    top: 10vh;
+  
+  }
+
+   .home-content {
+    position: relative;
+    z-index: 1;
+   
   }
 
   .auth-bg {
@@ -508,6 +542,19 @@ button:hover, input:hover, textarea:hover, select:hover {
   }
   .card-titles span {
     font-size: 24px !important;
+  }
+  .navbar-collapse {
+    background-color: var(--color-bg); 
+    padding: 20px 30px ;
+  
+  }
+
+  .home-bg {
+    position: relative;
+    height: 60vh;
+    max-width: 1200px;
+  margin: 60px auto;
+  padding: 1em ;
   }
 }
 

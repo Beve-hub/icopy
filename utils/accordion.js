@@ -1,11 +1,13 @@
 // accordion.js
-function createAccordion(containerId, items) {
+function createAccordion(containerId, items, maxItems) {
   const container = document.getElementById(containerId);
   if (!container) return;
 
   container.innerHTML = '';
 
-  items.forEach((item, index) => {
+  const limitedItems = maxItems ? items.slice(0, maxItems) : items;
+
+  limitedItems.forEach((item, index) => {
     const itemDiv = document.createElement('div');
     itemDiv.className = 'accordion-item';
 
@@ -38,7 +40,11 @@ function createAccordion(containerId, items) {
   });
 }
 
+ 
 document.addEventListener('DOMContentLoaded', function () {
-  createAccordion('narrowAccordion', accordionItems);
-  createAccordion('wideAccordion', accordionItems);
+  const accorions = document.querySelectorAll('.accordion[data-count]');
+  accordions.forEach(container => {
+    const count = parseInt(container.getAttribute('data-count'), 10) || 0;
+    createAccordion(container.id, accordionItems, count);
+  });
 });

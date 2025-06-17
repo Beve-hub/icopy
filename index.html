@@ -279,7 +279,7 @@
     </div>
             </div>
 
-            <div id="narrowAccordion" class="accordion " style="max-width: 500px;"></div>
+            <div id="narrowAccordion" class="accordion " data-count="5" style="max-width: 500px;"></div>
 
             
         </div>
@@ -431,5 +431,12 @@
   <script src="/component/js/heatmap.js"></script>
   <script src="/utils/accordion.js"></script>
   <script src="/utils/accordion-data.js"></script>
+  <script>
+     const count_accordion = 5;
+  document.addEventListener('DOMContentLoaded', function () {
+    createAccordion('narrowAccordion', accordionItems, count_accordion);
+    
+  });
+</script>
 </body>
 </html>

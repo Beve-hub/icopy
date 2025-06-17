@@ -16,7 +16,7 @@
   <div class="container ">
    <div class="col-md-6 text-start text-md-start">
         <p class="lead">Lorem ipsum </p>
-        <h1 class="display-4 fw-bold" style="color: var(--color-primary);">Frequently Asked questions</h1>
+        <h1 class="display-4 fw-bold card-titles" style="color: var(--color-primary); font-family: var(--font-family-heading);">Frequently Asked questions</h1>
         <p class="lead">Lorem ipsum</p>
         <p class="lead text-start">
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus consectetur, esse quae ratione quibusdam
@@ -30,7 +30,7 @@
     </div>
   
 <section class="container py-5">
-  <div id="wideAccordion" class="accordion" style="max-width: 1000px;"></div>
+  <div id="wideAccordion" class="accordion" data-count="10" style="max-width: 900px;"></div>
 </section>
     
    
@@ -42,5 +42,13 @@
   <script src="/component/footer/footer.js"></script>
   <script src="/utils/accordion.js"></script>
   <script src="/utils/accordion-data.js"></script>
+  <script>
+     const count_accordion = 10;
+  document.addEventListener('DOMContentLoaded', function () {
+    createAccordion('narrowAccordion', accordionItems, count_accordion);
+    createAccordion('wideAccordion', accordionItems, count_accordion);
+  });
+</script>
+ 
 </body>
 </html>

@@ -71,7 +71,9 @@ justify-content: center;
     background-color: transparent !important;
   }
 
-  
+  .navbar-nav{
+    gap: 40px;
+  }
 
   .dropdown-menu {
     background-color: var(--color-bg); /* Override black default */
@@ -555,6 +557,9 @@ button:hover, input:hover, textarea:hover, select:hover {
     max-width: 1200px;
   margin: 60px auto;
   padding: 1em ;
+  }
+  .navbar-nav{
+    gap: 10px;
   }
 }
 

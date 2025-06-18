@@ -11,9 +11,9 @@ export async function loadDashNav() {
 }
 
 function initDashNav() {
-  // Updated navItems array with Bootstrap icon classes
+ 
   const navItems = [
-    { label: "Copy Trading", href: "/dashboard/Copy.html", iconClass: "bi bi-people" },
+    { label: "Copy Trading", href: "/dashboard/Copy.html", iconClass: "bi bi-people", },
     { label: "Leverage", href: "/dashboard/leverage.html", iconClass: "bi bi-graph-up" },
     { label: "Mining", href: "/dashboard/mining.html", iconClass: "bi bi-cpu" },
     { label: "Deposit", href: "/dashboard/deposit.html", iconClass: "bi bi-box-arrow-in-down" },
@@ -22,16 +22,16 @@ function initDashNav() {
     { label: "Pricing", href: "/dashboard/pricing.html", iconClass: "bi bi-currency-dollar" },
   ];
 
-  // Render nav links with Bootstrap icons
+
   const renderLinks = (id) => {
     const el = document.getElementById(id);
     if (!el) return;
     navItems.forEach(({ label, href, iconClass }) => {
       const li = document.createElement("li");
       li.className = "nav-item";
-      // Change: Add Bootstrap icon to nav link
+      
       li.innerHTML = `
-        <a class="nav-link px-3 py-1 d-flex align-items-center gap-2" href="${href}">
+        <a class="nav-link px-3 d-flex align-items-center gap-2" href="${href}">
           <i class="${iconClass} nav-icon" style="color:var(--color-bg);"></i>
           ${label}
         </a>`;
@@ -76,7 +76,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const panes = document.querySelectorAll(".notif-pane");
   const dropdownMenu = document.querySelector(".dropdown-menu");
 
-  // Prevent dropdown from closing when tab is clicked
+ 
   dropdownMenu?.addEventListener("click", (e) => {
     e.stopPropagation();
   });
@@ -104,24 +104,26 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-  const currentPath = window.location.pathname;
-  document.querySelectorAll(".nav-link").forEach((link) => {
-    const icon = link.querySelector(".nav-icon");
-    if (link.getAttribute("href") === currentPath) {
-      link.classList.add("active");
-      link.style.color = "var(--color-primary)"; 
-      if (icon) {
-        icon.style.color = "#000";
-      }
-    } else {
-      link.style.color = ""; 
-      if (icon) {
-        icon.style.color = "#fff"; 
-      }
-    }
-  });
 
-  // Ensure mobile menu is hidden on large screens
+const currentPath = window.location.pathname;
+document.querySelectorAll(".nav-link").forEach((link) => {
+  const icon = link.querySelector(".nav-icon");
+  const isActive = link.getAttribute("href") === currentPath;
+
+  link.classList.toggle("active", isActive);
+  link.style.setProperty("background-color", "transparent", "important");
+
+  if (isActive) {
+    link.style.setProperty("color", "var(--color-primary)", "important");
+    icon?.style.setProperty("color", "var(--color-primary)", "important");
+  } else {
+    link.style.removeProperty("color");
+    icon?.style.removeProperty("color");
+  }
+});
+
+
+
   const navbarCollapse = document.querySelector("#navbarContent");
   const navbarToggler = document.querySelector(".navbar-toggler");
   if (window.innerWidth >= 992) {

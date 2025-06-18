@@ -540,45 +540,7 @@ button:hover, input:hover, textarea:hover, select:hover {
   background-color: var(--color-primary);
 }
 
-@media (max-width: 768px) {
-  #testimonial-container {
-    width: 250px;
-  }
-  .card-titles {
-    font-size: 24px !important;
-  }
-  .card-titles span {
-    font-size: 24px !important;
-  }
-  .navbar-collapse {
-    background-color: var(--color-bg); 
-    padding: 20px 30px ;
-  
-  }
 
-  .home-bg {
-    position: relative;
-    height: 60vh;
-    max-width: 1200px;
-  margin: 60px auto;
-  padding: 1em ;
-  }
-  .navbar-nav{
-    gap: 10px;
-  }
-  .auth-copy{
-  background-color: transparent; 
-  border:  var(--color-primary);
-}
-.auth-bg {
-    background-image: url('/assets/login.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    position: relative;
-    height: 100vh;
-  }
-}
 
 .image-toggle-container {
   gap: 10px;
@@ -740,6 +702,17 @@ button:hover, input:hover, textarea:hover, select:hover {
   pointer-events: none;
 }
 
+.club-opt {
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4;
+}
+
+.opt-larg{
+  display: flex ;
+  gap: 10px;
+}
 
 @media (prefers-color-scheme: dark) {
 :root {
@@ -761,7 +734,11 @@ button:hover, input:hover, textarea:hover, select:hover {
  @media (min-width: 1024px) {
       #card-container {
         grid-template-columns: repeat(4, 1fr);
-      }}
+      }
+      .opt-small{
+  display: none !important;
+}
+    }
 
       @media (max-width: 600px) {
   .pocket {
@@ -800,4 +777,54 @@ button:hover, input:hover, textarea:hover, select:hover {
   z-index: 2;
   margin: 10px 0;
 }
+}
+@media (max-width: 768px) {
+  #testimonial-container {
+    width: 250px;
+  }
+  .card-titles {
+    font-size: 24px !important;
+  }
+  .card-titles span {
+    font-size: 24px !important;
+  }
+  .navbar-collapse {
+    background-color: var(--color-bg); 
+    padding: 20px 30px ;
+  
+  }
+  .club-opt {
+  display: flex;
+  flex-wrap: wrap;
+}
+.opt-small{
+  display: flex;
+  gap: 10px;
+}
+
+.opt-larg{
+  display: none !important;
+}
+  .home-bg {
+    position: relative;
+    height: 60vh;
+    max-width: 1200px;
+  margin: 60px auto;
+  padding: 1em ;
+  }
+  .navbar-nav{
+    gap: 10px;
+  }
+  .auth-copy{
+  background-color: transparent; 
+  border:  var(--color-primary);
+}
+.auth-bg {
+    background-image: url('/assets/login.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    height: 100vh;
+  }
 }

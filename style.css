@@ -714,6 +714,16 @@ button:hover, input:hover, textarea:hover, select:hover {
   gap: 10px;
 }
 
+.setting-pro{
+  display: flex;
+  gap: 10px;
+}
+
+.setings-card {
+  display: flex;
+  gap: 10px;
+}
+
 @media (prefers-color-scheme: dark) {
 :root {
     --color-bg: #000000; 
@@ -745,6 +755,15 @@ button:hover, input:hover, textarea:hover, select:hover {
     border: none !important;
   }
 
+  .setting-pro{
+  display: grid;
+  gap: 10px;
+  margin: 0px 10px;
+}
+.setings-card {
+  display: grid;
+  gap: 10px;
+}
   .image-frame {
   width: 100px;
   height: 250px;

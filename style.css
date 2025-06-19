@@ -314,7 +314,10 @@ ul, ol {
   margin: 0 0 1em 1.5em;
   padding: 0;
 }
-
+.logo{
+    width: 250px ;
+    height: auto;
+  }
 button, input, textarea, select {
   font: inherit;
   padding: 0.5em;
@@ -377,6 +380,68 @@ button:hover, input:hover, textarea:hover, select:hover {
   color: var(--color-text);
 }
 
+.progress-bar {
+  background-color: #eee;
+  border-radius: 20px;
+  overflow: hidden;
+  height: 15px;
+  position: relative;
+  margin: 10px 0;
+}
+
+.custom-tab {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px 16px;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.3s;
+}
+
+.custom-tab.active {
+  border-color: var(--color-text);
+  font-weight: bold;
+}
+
+.custom-tabs-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 8px;
+  border-bottom: 1px solid #ccc;
+  border-radius: none !important;
+}
+
+.custom-tab-pane {
+  display: none;
+  padding: 20px 0;
+}
+
+.custom-tab-pane.active {
+  display: block;
+}
+
+.custom-min {
+  display: flex;
+  justify-content: space-between;
+}
+.custom-micro {
+  display: flex;
+justify-content: space-evenly;
+  gap: 40px;
+  
+}
+.custom-macro span{
+  font-size: 12px;
+  color: #999898;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  border-radius: 5px;
+  transition: width 0.4s ease;
+}
 .accordion {
   background-color: var(--color-bg);
   color: var(--color-text);
@@ -410,7 +475,10 @@ button:hover, input:hover, textarea:hover, select:hover {
   transition: transform 0.2s ease-in-out;
 }
 
-/* accordion.css */
+ .profile-small {
+  display: none ;
+}
+
 .accordion-item {
   border: 1px solid var(--color-secondary);
   border-radius: 12px;
@@ -775,6 +843,9 @@ button:hover, input:hover, textarea:hover, select:hover {
   flex-shrink: 1;
 }
 
+.profile-small {
+  display: block;
+}
 
 .image-frame.active {
   width: 200px;
@@ -800,6 +871,11 @@ button:hover, input:hover, textarea:hover, select:hover {
 @media (max-width: 768px) {
   #testimonial-container {
     width: 250px;
+  }
+
+  .logo{
+    width: 100px ;
+    height: auto;
   }
   .card-titles {
     font-size: 24px !important;
@@ -846,4 +922,24 @@ button:hover, input:hover, textarea:hover, select:hover {
     position: relative;
     height: 100vh;
   }
+
+  .custom-min {
+  display: grid;
+  justify-content: space-end;
+}
+.custom-micro {
+  display: flex;
+justify-content: space-evenly;
+  gap: 10px;
+}
+.custom-macro span{
+  font-size: 12px;
+  color: #999898;
+}
+.custom-macro p{
+ font-size: 14px;
+}
+.custom-tab {
+ font-size: 14px;
+}
 }

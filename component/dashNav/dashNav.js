@@ -151,23 +151,22 @@ function styleDashNav() {
 
   if (secondLayer) {
     secondLayer.style.backgroundColor = "var(--color-back, #f8f9fa)";
-    secondLayer.style.borderTop = "1px solid var(--color-border-light, #e0e0e0)";
     secondLayer.style.boxShadow = "0 1px 2px rgba(0, 0, 0, 0.05)";
-    // Remove border from desktop nav links
+   
     const desktopNavLinks = secondLayer.querySelectorAll("#desktopNavLinks .nav-link");
     desktopNavLinks.forEach((link) => {
       link.style.border = "none";
     });
   }
 
-  // Style Bootstrap icons in nav links
+
   document.querySelectorAll(".nav-icon").forEach((icon) => {
     icon.style.fontSize = "1.2rem";
     icon.style.marginRight = "8px";
     icon.style.verticalAlign = "middle";
   });
 
-  // Style language selects: transparent background, white border, white text
+  
   const langSelects = [
     document.getElementById("languageSelect"),
     document.getElementById("languageSelectMobile"),
@@ -181,7 +180,7 @@ function styleDashNav() {
     }
   });
 
-  // Style dropdown toggles and menus: transparent background, white text
+
   document.querySelectorAll('.dropdown-toggle').forEach((toggle) => {
     toggle.style.background = "transparent";
     toggle.style.color = "#fff";
@@ -191,14 +190,14 @@ function styleDashNav() {
     menu.style.background = "#fff";
     menu.style.color = "#121212";
     menu.style.border = "none";
-    // Style dropdown items
+
     menu.querySelectorAll('.dropdown-item').forEach((item) => {
       item.style.background = "#fff";
       item.style.color = "#121212";
     });
   });
 
-  // Reinforce hiding mobile menu on large screens
+
   const navbarCollapse = nav.querySelector("#navbarContent");
   if (navbarCollapse && window.innerWidth >= 992) {
     navbarCollapse.style.display = "none !important";
@@ -206,7 +205,7 @@ function styleDashNav() {
   }
 }
 
-// Handle window resize to ensure mobile menu stays hidden on large screens
+
 window.addEventListener("resize", () => {
   const navbarCollapse = document.querySelector("#navbarContent");
   const navbarToggler = document.querySelector(".navbar-toggler");

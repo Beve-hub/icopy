@@ -76,7 +76,10 @@ justify-content: center;
     gap: 40px;
   }
   
-
+.profile-image{
+    width: 30px;
+    height: 30px;
+  }
   .dropdown-menu {
     background-color: var(--color-bg); 
     border: none;
@@ -269,7 +272,7 @@ justify-content: center;
   }
 
   .contact-bg {
-    background-image: url('/assets/contact.png'); /* Replace with your image path */
+    background-image: url('/assets/contact.png'); 
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -537,7 +540,6 @@ justify-content: space-evenly;
     background-color: transparent;
     transition: all 0.3s ease;
     margin: 20px 8px;
-    
   }
 
   .nav-pills .nav-link.active {
@@ -951,8 +953,18 @@ justify-content: space-evenly;
   }
 
   .logo{
-    width: 100px ;
+    width: 120px ;
     height: auto;
+  }
+  .profile-logo {
+    font-size: 10px;
+  }
+   .profile-log {
+    font-size: 8px;
+  }
+  .profile-image{
+    width: 30px;
+    height: 30px;
   }
   .card-titles {
     font-size: 24px !important;

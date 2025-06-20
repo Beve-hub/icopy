@@ -71,7 +71,7 @@ function initDashNav() {
     alert("Logging out...");
   });
 
-document.addEventListener("DOMContentLoaded", () => {
+ document.addEventListener("DOMContentLoaded", () => {
   const tabs = document.querySelectorAll("#notifTabs .nav-link");
   const panes = document.querySelectorAll(".notif-pane");
   const dropdownMenu = document.querySelector(".dropdown-menu");
@@ -120,7 +120,7 @@ document.querySelectorAll(".nav-link").forEach((link) => {
     link.style.removeProperty("color");
     icon?.style.removeProperty("color");
   }
-});
+ });
 
 
 

@@ -53,15 +53,15 @@ footer {
 
 
 section {
-  
-  margin: 20px auto;
+  margin: 10px auto;
   max-width: 1200px;
   background-color: var(--color-bg);
   display: flex;
   flex-direction: column;
-justify-content: center;
+  justify-content: center;
   padding: auto 20px;
 }
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -123,11 +123,30 @@ justify-content: center;
     
 }
 
-  .home-bg {
+.dash-bg{
+   background-image: url('/assets/home_Image.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #282828;
+    padding-top: 15rem;
+    position: relative;
+    height: 70vh;
+}
+.dash-back{
+   background-image: url('/assets/home_I.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-top: 10rem;
+    position: relative;
+    height: 70vh;
+}
+.home-bg {
     position: relative;
     height: 70vh;
     margin-top: 30px;
-  }
+}
   .hero-bg::before {
     content: '';
     position: absolute;
@@ -323,6 +342,11 @@ ul, ol {
     width: 250px ;
     height: auto;
   }
+
+.dash-min {
+  margin-top: 15rem;
+}
+
 button, input, textarea, select {
   font: inherit;
   padding: 0.5em;
@@ -1046,5 +1070,21 @@ justify-content: space-evenly;
 }
 .murge {
   width: 300px;
+}
+.dash-bg{
+    padding-top: 5rem;
+}
+.dash-back{
+    padding-top: 5rem;
+}
+.dash-min {
+  margin-top: 3rem;
+}
+.image-fluid{
+  width: 50% !important;
+  height: 50% !important;
+}
+.hero-text{
+  font-size: 16px;
 }
 }

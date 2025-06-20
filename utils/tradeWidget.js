@@ -10,7 +10,7 @@ function loadTradingViewScript(callback) {
   document.head.appendChild(script);
 }
 
-// Widget configs for each tab
+
 const widgetConfigs = {
   crypto: {
     container_id: "cryptoWidget",
@@ -44,19 +44,19 @@ const widgetConfigs = {
   }
 };
 
-// Render widget for a given tab
+
 function renderWidget(tab) {
   const config = widgetConfigs[tab];
-  // Remove previous widget if any
+ 
   document.getElementById(config.container_id).innerHTML = "";
-  // eslint-disable-next-line no-undef
+ 
   new TradingView.widget(config);
 }
 
-// Initial load: show crypto widget
+
 loadTradingViewScript(() => renderWidget('crypto'));
 
-// Tab switching logic
+
 document.getElementById('tradeTabs').addEventListener('click', (e) => {
   if (e.target && e.target.matches('button[data-bs-toggle="tab"]')) {
     const tabId = e.target.getAttribute('data-bs-target').replace('#', '');

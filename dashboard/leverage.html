@@ -13,10 +13,9 @@
     <div id="navbar"></div>
 
 
-
-    <section class="container py-4">
-
-       <ul class="nav nav-tabs gap-2" id="tradeTabs" role="tablist" style="display: flex; justify-content: center; align-items: center; margin: 30px;">
+        <div class="dash-back">
+          <div class="container">
+             <ul class="nav nav-tabs gap-2 " id="tradeTabs" role="tablist" style="display: flex; justify-content: center; align-items: center; margin: 20px; border-bottom: 0 !important;">
         <li class="nav-item py-4" role="presentation">
           <button class="nav-links text-white  active" id="crypto-tab" data-bs-toggle="tab" data-bs-target="#crypto" type="button" role="tab" style="background-color: transparent;">Crypto</button>
         </li>
@@ -27,8 +26,13 @@
           <button class="nav-links text-white" id="stocks-tab" data-bs-toggle="tab" data-bs-target="#stocks" type="button" role="tab" style="background-color: transparent;">Stocks</button>
         </li>
       </ul>
-      
-      <div class="tab-content p-3 border border-top-0" id="tradeTabsContent">
+            <div class="border" style="border-radius: 10px;">
+              
+      <div class="d-flex justify-content-between align-items-center p-3" style="background-color: var(--color-back);">
+              <p class="fw-bold fs-5">Crypto Asset chart</p>
+              <button style="background-color: var(--color-primary); color: var(--color-bg);">BTC/USD</button>
+            </div>
+      <div class="tab-content p-3 " id="tradeTabsContent">
         <div class="tab-pane fade show active" id="crypto" role="tabpanel">
           <div id="cryptoWidget"></div>
         </div>
@@ -39,11 +43,15 @@
           <div id="stocksWidget"></div>
         </div>
       </div>
-    </section>
+            </div>
+            
+          </div>
+        </div>
+   
 
 
     <!---trade section---->
-    <section class="container py-4">
+    <section class="container py-4 my-5">
       <div class="row g-4 align-items-start flex-column flex-md-row my-4">
 
         <!------left ---->

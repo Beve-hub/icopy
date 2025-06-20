@@ -10,6 +10,7 @@
   --color-primary: #D4FF27;
   --color-secondary: #9abe07;
   --color-red:#ff0000;
+  --color-gray:#adacac;
   --border-radius: 6px;
   --border-color: #AEAEAE61;
   --card-color:  #D9D9D917;
@@ -823,6 +824,50 @@ justify-content: space-evenly;
   padding: 0px 10px ;
   margin-top: 5px;
 }
+
+.logo-stack img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    margin-left: -10px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+  }
+
+  .logo-stack img:first-child {
+    margin-left: 0; 
+  }
+
+  .stat-label {
+    color: var(--color-gray);
+    font-size: 14px;
+  }
+  .stat-value {
+    color: var(--color-primary);
+  }
+
+  .stat-values {
+    color: var(--color-text);
+  }
+  .stat-card {
+    min-width: 120px;
+    flex: 0 0 auto;
+  }
+  .stats-container {
+    scroll-behavior: smooth;
+  }
+  .scroll-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+  }
+  .scroll-btn.left {
+    left: 0;
+  }
+  .scroll-btn.right {
+    right: 0;
+  }
 
 @media (prefers-color-scheme: dark) {
 :root {

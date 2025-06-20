@@ -69,9 +69,54 @@
                 </div>
             </div>
 
-            <div>
+            <div class="position-relative">
+  <!-- Scroll Buttons -->
+  <button id="scroll-left" class="scroll-btn left d-md-none" style="background-color: transparent !important;"><i class="bi bi-chevron-left"></i></button>
+  <button id="scroll-right" class="scroll-btn right d-md-none" style="background-color: transparent !important;"><i class="bi bi-chevron-right"></i></button>
+  
 
+  <!-- Scroll Container -->
+  <div class="d-flex gap-3 border-bottom py-4 overflow-auto flex-nowrap stats-container no-scrollbar">
+    <div class="stat-card">
+      <span class="stat-label">Trades</span>
+      <p class="stat-value">Lorem ipsum</p>
+    </div>
+    <div class="stat-card">
+      <span class="stat-label">Wins</span>
+      <p class="stat-values">Lorem ipsum</p>
+    </div>
+    <div class="stat-card">
+      <span class="stat-label">Looses</span>
+      <p class="stat-values">Lorem ipsum</p>
+    </div>
+    <div class="stat-card">
+      <span class="stat-label">Followers</span>
+      <p class="stat-values">Lorem ipsum</p>
+    </div>
+    <div class="stat-card">
+      <span class="stat-label">Win Percent</span>
+      <p class="stat-values">Lorem ipsum</p>
+    </div>
+    <div class="stat-card">
+      <span class="stat-label">Profit share</span>
+      <p class="stat-values">Lorem ipsum</p>
+    </div>
+  </div>
+           </div>
+
+             <div class="d-flex justify-content-between align-items-center  my-4">
+                <div>
+                    <p>Lorem ipsum</p>
+                </div>
+                <div class="d-flex logo-stack">
+              <img src="/assets/bitcoin-icon.png" alt="Logo 1" style="width: 20px; height: 20px;">
+              <img src="/assets/BNB-icon.png" alt="Logo 2" style="width: 20px; height: 20px;">
+              <img src="/assets/doge-icon.png" alt="Logo 3" style="width: 20px; height: 20px;">
+              <img src="/assets/kenki-icon.png" alt="Logo 3" style="width: 20px; height: 20px;">
+              <img src="/assets/eth-icon.png" alt="Logo 4" style="width: 20px; height: 20px;">
             </div>
+            </div>
+            
           </div>
 
 
@@ -80,12 +125,12 @@
               <p class="border p-3 rounded">Crypto</p>
           </div>
 
-          <div class="container p-4 " style="border: 1px solid var(--color-primary); background-color: var(--color-back); border-radius: 10px; align-items: center; ">
-             <p class="fs-5 mt-2">Amount</p>
+          <div class="container  " style="border: 1px solid var(--color-primary); background-color: var(--color-back); border-radius: 10px; align-items: center; padding: 5px 20px; ">
+             <p class="fs-6 mt-2">Amount</p>
           </div>
 
-          <div class="container p-4 my-4" style="border: 1px solid var(--color-primary); background-color: var(--color-back); border-radius: 10px; align-items: center; ">
-                <p class="fs-5 mt-2">Stop-loss</p>
+          <div class="container my-4" style="border: 1px solid var(--color-primary); background-color: var(--color-back); border-radius: 10px; align-items: center; padding: 5px 20px; ">
+                <p class="fs-6 mt-2">Stop-loss</p>
           </div>  
 
            <p class="container border-bottom py-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
@@ -152,7 +197,7 @@
           </div> 
           <div class="form-check">
                 <input class="form-check-input" type="checkbox" value="" id="checkDefault">
-                <label class="form-check-label" for="checkDefault">
+                <label class="form-check-label" for="checkDefault" style="font-size: 14px;">
                   Lorem ipsum dolor sit amet consectetur adipiscing elit
                 </label>
               </div>
@@ -186,5 +231,20 @@
   });
   enableCopyButtons();
 </script>
+<script>
+  const scrollContainer = document.querySelector('.stats-container');
+  const scrollLeftBtn = document.getElementById('scroll-left');
+  const scrollRightBtn = document.getElementById('scroll-right');
+  const scrollAmount = 130 * 3; 
+
+  scrollLeftBtn.addEventListener('click', () => {
+    scrollContainer.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+  });
+
+  scrollRightBtn.addEventListener('click', () => {
+    scrollContainer.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+  });
+</script>
+
 </body>
 </html>

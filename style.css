@@ -138,8 +138,13 @@ section {
     background-position: center;
     background-repeat: no-repeat;
     padding-top: 10rem;
-    position: relative;
-  
+}
+.dash-backs{
+   background-image: url('/assets/home_I.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-top: 15rem;
 }
 .home-bg {
     position: relative;
@@ -1096,6 +1101,9 @@ justify-content: space-evenly;
 }
 .dash-back{
     padding-top: 5rem;
+}
+.dash-backs{
+    padding: 6rem 1rem 0rem 1rem;
 }
 .dash-min {
   margin-top: 3rem;

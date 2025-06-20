@@ -792,6 +792,38 @@ justify-content: space-evenly;
   gap: 10px;
 }
 
+.marge {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+.morge {
+  width: 300px;
+}
+
+.murge {
+  width: 50rem;
+}
+
+.mirge {
+  width: 400px;
+}
+
+.morge p{
+  padding: 0px 10px ;
+  margin-top: 5px;
+}
+
+.murge p{
+  padding: 0px 10px ;
+  margin-top: 5px;
+}
+
+.mirge p{
+  padding: 0px 10px ;
+  margin-top: 5px;
+}
+
 @media (prefers-color-scheme: dark) {
 :root {
     --color-bg: #000000; 
@@ -941,5 +973,20 @@ justify-content: space-evenly;
 }
 .custom-tab {
  font-size: 14px;
+}
+.marge {
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 10px;
+  
+}
+.morge {
+  width: 150px;
+}
+.mirge {
+  width: 150px;
+}
+.murge {
+  width: 300px;
 }
 }

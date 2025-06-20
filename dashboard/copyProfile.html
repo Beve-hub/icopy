@@ -3,9 +3,188 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <title>iCopyTrader</title>
 </head>
 <body>
-    
+    <!-- Navbar -->
+    <div id="navbar"></div>
+
+    <!-- Hero Section -->
+     <section class="container py-5">
+  <div class="row justify-content-center align-items-center flex-column  flex-md-row">
+    <div class="col-md-6 text-start text-md-start pb-4">
+      <p class="lead fs-2 text-start " >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do</p>
+      <p class="lead text-start">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus consectetur, esse quae ratione quibusdam nulla accusantium! Aut aperiam nisi, impedit similique quis vitae corrupti veniam animi est dicta, tempore voluptatum?</p>
+
+      <div>
+        <a href="#get-started" class="btn" style="background-color: var(--color-primary); color: var(--color-bg); width: 200px;">Lorem</a>
+      </div>
+    </div>
+
+    <div class="col-md-6 text-center">
+    <div class="d-flex justify-content-center align-items-center">
+   <img
+      src="/assets/copy-profile.png"
+      alt="profile-imga"
+      class="img-fluid mb-2"
+      style="
+        position: relative;
+        z-index: 1;
+        display: block;
+        width: 80%;
+        height: 80%;
+      "
+    />
+    </div>
+    </div>
+
+  </div>
+      </section>
+
+       <!---Body Section-->
+      <section class="container py-5">
+          <div class="d-flex justify-content-between align-items-center">
+            <div class="d-flex gap-3">
+              <img src="/assets/p2.png" alt="profile-imga" width="60px" height="60px">
+              <div>
+                <h5>Lorem ipsum</h5>
+                <p>Lorem ipsum dolor sit</p>
+              </div>
+            </div>
+            <button style="background-color: var(--color-primary); width: 100px;"><a href="/dashboard/copyProfile.html" style="color: var(--color-bg);">Copy</a></button>
+          </div>
+
+          <!---box-->
+          <div class="container  rounded border p-4 mt-4" style="background-color:var(--color-back);">
+            <div class="d-flex justify-content-between align-items-center border-bottom">
+                <div>
+                    <p>7D ROI</p>
+                    <p class="fs-5" style="color: var(--color-primary);">$67,000.00</p>
+                </div>
+                <div>
+                     <canvas id="ethLineChart" width="70" height="30"></canvas>
+                </div>
+            </div>
+
+            <div>
+
+            </div>
+          </div>
+
+
+          <div class="container d-flex gap-4 justify-content-center mt-4">
+              <p  class="border p-3 rounded">Multiplier</p>
+              <p class="border p-3 rounded">Crypto</p>
+          </div>
+
+          <div class="container p-4 " style="border: 1px solid var(--color-primary); background-color: var(--color-back); border-radius: 10px; align-items: center; ">
+             <p class="fs-5 mt-2">Amount</p>
+          </div>
+
+          <div class="container p-4 my-4" style="border: 1px solid var(--color-primary); background-color: var(--color-back); border-radius: 10px; align-items: center; ">
+                <p class="fs-5 mt-2">Stop-loss</p>
+          </div>  
+
+           <p class="container border-bottom py-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+
+           <div class="my-4">
+              <p id="advanced-toggle" style="cursor: pointer;">
+                Advanced (optional) <i id="toggle-icon" class="bi bi-chevron-up"></i>
+              </p>
+              <div id="advanced-content" class="form-check" style="display: block;">
+                <input class="form-check-input" type="checkbox" value="" id="checkDefault">
+                <label class="form-check-label" for="checkDefault">
+                  Lorem ipsum dolor sit amet consectetur adipiscing elit
+                </label>
+              </div>
+            </div>
+
+          <div class="my-4">
+            <p>Margin Mode</p>
+            <div class="marge">
+              <div class="morge">
+      <div class="p-2" style="border: 1px solid var(--color-text); background-color: var(--color-back); border-radius: 10px;">
+        <p>Lorem ipsum</p>
+      </div>
+              </div>
+              <div class="morge">
+                <div class="p-2" style="border: 1px solid var(--color-primary); background-color: var(--color-back); border-radius: 10px;">
+                  <p>Lorem ipsum</p>
+                </div>
+              </div>
+              <div class="morge">
+                <div class="p-2" style="border: 1px solid var(--color-primary); background-color: var(--color-back); border-radius: 10px;">
+                  <p>Lorem ipsum</p>
+                </div>
+              </div>
+            </div>
+          </div> 
+
+           <div class="my-4">
+            <p>Margin Mode</p>
+            <div class="marge">
+              <div class="mirge">
+      <div class="p-2" style="border: 1px solid var(--color-text); background-color: var(--color-back); border-radius: 10px;">
+        <p>Lorem ipsum</p>
+      </div>
+              </div>
+              <div class="mirge">
+                <div class="p-2" style="border: 1px solid var(--color-primary); background-color: var(--color-back); border-radius: 10px;">
+                  <p>Lorem ipsum</p>
+                </div>
+              </div>
+            </div>
+          </div> 
+
+          <div class="my-2">
+            <p>Margin Mode</p>
+            <div class="marge">
+              <div class="murge">
+      <div class="p-2" style="border: 1px solid var(--color-text); background-color: var(--color-back); border-radius: 10px;">
+        <p>Lorem ipsum</p>
+      </div>
+              </div>
+              
+            </div>
+          </div> 
+          <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="checkDefault">
+                <label class="form-check-label" for="checkDefault">
+                  Lorem ipsum dolor sit amet consectetur adipiscing elit
+                </label>
+              </div>
+
+              <div style="display: flex; justify-content: center; margin-top: 20px;">
+                <button style="background-color: var(--color-primary); color: var(--color-bg); width: 150px;">Copy</button>
+              </div>
+      </section>
+
+       <!--footer--> 
+  <div id="footer"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+   <script type="module" src="/component/dashNav/dashNav.js"></script>
+  <script src="/component/footer/footer.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="/component/js/toggle.js"></script>
+  <script type="module">
+  import { createLineChart, enableCopyButtons } from '/utils/plan.js';
+
+  createLineChart({
+    id: 'ethLineChart',
+    width: 200,
+    height: 50,
+    data: [20, 10, 30, 5,40,30,25,35,40],
+    borderColor: '#D4FF27',
+    pointColor: '#D4FF27',
+    label: 'Example 1',
+    showXAxis: false,
+    showYAxis: false
+  });
+  enableCopyButtons();
+</script>
 </body>
 </html>

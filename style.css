@@ -125,7 +125,8 @@ justify-content: center;
 
   .home-bg {
     position: relative;
-    height: 60vh;
+    height: 70vh;
+    margin-top: 30px;
   }
   .hero-bg::before {
     content: '';

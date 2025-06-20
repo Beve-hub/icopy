@@ -54,7 +54,7 @@ footer {
 
 section {
   
-  margin: 10px auto;
+  margin: 20px auto;
   max-width: 1200px;
   background-color: var(--color-bg);
   display: flex;

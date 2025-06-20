@@ -137,9 +137,9 @@ section {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-     padding-top: 5rem;
-    padding-bottom: 3rem;
-
+    padding-top: 3rem;
+    position: relative;
+  
 }
 .home-bg {
     position: relative;

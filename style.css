@@ -112,6 +112,7 @@ justify-content: center;
     color: var(--color-back);
   }
 
+  
 .hero-bg {
     background-image: url('/assets/aboutimage.png');
     background-size: cover;
@@ -120,12 +121,11 @@ justify-content: center;
     position: relative;
     height: 70vh;
     
-  }
+}
 
   .home-bg {
     position: relative;
     height: 60vh;
-   
   }
   .hero-bg::before {
     content: '';

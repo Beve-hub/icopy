@@ -129,7 +129,7 @@ section {
     background-position: center;
     background-repeat: no-repeat;
     background-color: #282828;
-    padding-top: 3rem;
+    padding-top: 18rem;
     padding-bottom: 3rem;
 }
 .dash-back{
@@ -137,7 +137,7 @@ section {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    padding-top: 3rem;
+    padding-top: 10rem;
     position: relative;
   
 }
@@ -559,7 +559,6 @@ justify-content: space-evenly;
 
 
 .nav-pills .nav-link {
-    border: 1px solid white;
     color: white;
     background-color: transparent;
     transition: all 0.3s ease;
@@ -569,7 +568,21 @@ justify-content: space-evenly;
   .nav-pills .nav-link.active {
     background-color: #D4FF27 !important;
     color: #121212 !important;
-    border-color: #D4FF27 !important;
+  }
+  
+  .nav-pilling .nav-link {
+    display: block;
+    justify-content: start;
+    text-align: start;
+    color: white;
+    background-color: transparent;
+    transition: all 0.3s ease;
+    margin: 8px 0px;
+  }
+
+  .nav-pilling .nav-link.active {
+    color:  #D4FF27 !important;
+
   }
 
 #testimonial-container {
@@ -999,7 +1012,6 @@ justify-content: space-evenly;
   .navbar-collapse {
     background-color: var(--color-bg); 
     padding: 20px 30px ;
-  
   }
   .club-opt {
   display: flex;
@@ -1035,7 +1047,16 @@ justify-content: space-evenly;
     position: relative;
     height: 100vh;
   }
+.nav-pills .nav-link {
+    color: white;
+    background-color: transparent;
+    transition: all 0.3s ease;
+    margin: 20px 8px;
+  }
 
+  .nav-pills .nav-link.active {
+    color: #D4FF27 !important;
+  }
   .custom-min {
   display: grid;
   justify-content: space-end;
@@ -1083,7 +1104,10 @@ justify-content: space-evenly;
   width: 50% !important;
   height: 50% !important;
 }
-.hero-text{
-  font-size: 16px;
+.hero-text p{
+  font-size: 14px;
+}
+.hero-text h5{
+  font-size: 14px;
 }
 }

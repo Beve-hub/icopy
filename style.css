@@ -146,6 +146,12 @@ section {
     background-repeat: no-repeat;
     padding-top: 15rem;
 }
+.dash-backe{
+   background-image: url('/assets/home_I.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
 .home-bg {
     position: relative;
     height: 70vh;
@@ -1103,6 +1109,9 @@ justify-content: space-evenly;
     padding-top: 5rem;
 }
 .dash-backs{
+    padding: 6rem 1rem 0rem 1rem;
+}
+.dash-backe{
     padding: 6rem 1rem 0rem 1rem;
 }
 .dash-min {

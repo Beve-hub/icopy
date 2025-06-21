@@ -485,6 +485,9 @@ justify-content: space-evenly;
   transition: width 0.4s ease;
 }
 
+.subscribe{
+  background-color: var(--color-primary) !important;
+}
 /*
 .accordion-body {
   background-color: var(--color-bg);
@@ -1133,5 +1136,7 @@ justify-content: space-evenly;
 .hero-text h5{
   font-size: 14px;
 }
-
+.subscribe{
+  background-color: var(--color-primary) !important;
+}
 }

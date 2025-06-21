@@ -8,12 +8,12 @@ export async function loadDashNav() {
 
   initDashNav();
   styleDashNav();
+  setupMobileToggles(); 
 }
 
 function initDashNav() {
- 
   const navItems = [
-    { label: "Copy Trading", href: "/dashboard/Copy.html", iconClass: "bi bi-people", },
+    { label: "Copy Trading", href: "/dashboard/Copy.html", iconClass: "bi bi-people" },
     { label: "Leverage", href: "/dashboard/leverage.html", iconClass: "bi bi-graph-up" },
     { label: "Mining", href: "/dashboard/mining.html", iconClass: "bi bi-cpu" },
     { label: "Deposit", href: "/dashboard/deposit.html", iconClass: "bi bi-box-arrow-in-down" },
@@ -22,14 +22,12 @@ function initDashNav() {
     { label: "Pricing", href: "/dashboard/pricing.html", iconClass: "bi bi-currency-dollar" },
   ];
 
-
   const renderLinks = (id) => {
     const el = document.getElementById(id);
     if (!el) return;
     navItems.forEach(({ label, href, iconClass }) => {
       const li = document.createElement("li");
       li.className = "nav-item";
-      
       li.innerHTML = `
         <a class="nav-link px-3 d-flex align-items-center gap-2" href="${href}">
           <i class="${iconClass} nav-icon" style="color:var(--color-bg);"></i>
@@ -71,59 +69,44 @@ function initDashNav() {
     alert("Logging out...");
   });
 
- document.addEventListener("DOMContentLoaded", () => {
-  const tabs = document.querySelectorAll("#notifTabs .nav-link");
+  // Tabs inside notification dropdown
+  const tabs = document.querySelectorAll("#bellTab .nav-link");
   const panes = document.querySelectorAll(".notif-pane");
   const dropdownMenu = document.querySelector(".dropdown-menu");
 
- 
-  dropdownMenu?.addEventListener("click", (e) => {
-    e.stopPropagation();
-  });
+  dropdownMenu?.addEventListener("click", (e) => e.stopPropagation());
 
   tabs.forEach(tab => {
     tab.addEventListener("click", (e) => {
       e.preventDefault();
-      e.stopPropagation();
-
+      const targetId = tab.getAttribute("data-bs-target")?.replace("#", "");
+      tabs.forEach(t => t.classList.remove("active"));
       tab.classList.add("active");
-      const target = tab.getAttribute("data-target");
       panes.forEach(pane => {
-        pane.classList.toggle("d-none", pane.id !== target);
-      });
-        const targetId = tab.getAttribute("data-target");
-      panes.forEach((pane) => {
-        if (pane.id === targetId) {
-          pane.classList.remove("d-none");
-        } else {
-          pane.classList.add("d-none");
-        }
+        pane.classList.toggle("show", pane.id === targetId);
+        pane.classList.toggle("active", pane.id === targetId);
       });
     });
   });
-});
 
+  // Highlight active nav link
+  const currentPath = window.location.pathname;
+  document.querySelectorAll(".nav-link").forEach((link) => {
+    const icon = link.querySelector(".nav-icon");
+    const isActive = link.getAttribute("href") === currentPath;
+    link.classList.toggle("active", isActive);
+    link.style.setProperty("background-color", "transparent", "important");
 
+    if (isActive) {
+      link.style.setProperty("color", "var(--color-primary)", "important");
+      icon?.style.setProperty("color", "var(--color-primary)", "important");
+    } else {
+      link.style.removeProperty("color");
+      icon?.style.removeProperty("color");
+    }
+  });
 
-const currentPath = window.location.pathname;
-document.querySelectorAll(".nav-link").forEach((link) => {
-  const icon = link.querySelector(".nav-icon");
-  const isActive = link.getAttribute("href") === currentPath;
-
-  link.classList.toggle("active", isActive);
-  link.style.setProperty("background-color", "transparent", "important");
-
-  if (isActive) {
-    link.style.setProperty("color", "var(--color-primary)", "important");
-    icon?.style.setProperty("color", "var(--color-primary)", "important");
-  } else {
-    link.style.removeProperty("color");
-    icon?.style.removeProperty("color");
-  }
- });
-
-
-
+  // Collapse navbar on large screens
   const navbarCollapse = document.querySelector("#navbarContent");
   const navbarToggler = document.querySelector(".navbar-toggler");
   if (window.innerWidth >= 992) {
@@ -152,13 +135,11 @@ function styleDashNav() {
   if (secondLayer) {
     secondLayer.style.backgroundColor = "var(--color-back, #f8f9fa)";
     secondLayer.style.boxShadow = "0 1px 2px rgba(0, 0, 0, 0.05)";
-   
     const desktopNavLinks = secondLayer.querySelectorAll("#desktopNavLinks .nav-link");
     desktopNavLinks.forEach((link) => {
       link.style.border = "none";
     });
   }
-
 
   document.querySelectorAll(".nav-icon").forEach((icon) => {
     icon.style.fontSize = "1.2rem";
@@ -166,7 +147,6 @@ function styleDashNav() {
     icon.style.verticalAlign = "middle";
   });
 
-  
   const langSelects = [
     document.getElementById("languageSelect"),
     document.getElementById("languageSelectMobile"),
@@ -180,23 +160,21 @@ function styleDashNav() {
     }
   });
 
-
   document.querySelectorAll('.dropdown-toggle').forEach((toggle) => {
     toggle.style.background = "transparent";
     toggle.style.color = "#fff";
     toggle.style.border = "none";
   });
+
   document.querySelectorAll('.dropdown-menu').forEach((menu) => {
     menu.style.background = "#fff";
     menu.style.color = "#121212";
     menu.style.border = "none";
-
     menu.querySelectorAll('.dropdown-item').forEach((item) => {
       item.style.background = "#fff";
       item.style.color = "#121212";
     });
   });
-
 
   const navbarCollapse = nav.querySelector("#navbarContent");
   if (navbarCollapse && window.innerWidth >= 992) {
@@ -205,7 +183,43 @@ function styleDashNav() {
   }
 }
 
+function toggleMobilePanel(panelToShowId) {
+  const panels = ['mobileNavLinks', 'mobileBriefPanel', 'mobileNotifPanel'];
+  panels.forEach((id) => {
+    const el = document.getElementById(id);
+    if (el) {
+      el.classList.toggle('d-none', id !== panelToShowId);
+    }
+  });
+}
 
+function setupMobileToggles() {
+  const briefToggle = document.getElementById("briefToggle");
+  const bellToggle = document.getElementById("bellToggle");
+  const navbarToggler = document.querySelector(".navbar-toggler");
+
+  if (briefToggle) {
+    briefToggle.addEventListener("click", (e) => {
+      e.preventDefault();
+      toggleMobilePanel('mobileBriefPanel');
+    });
+  }
+
+  if (bellToggle) {
+    bellToggle.addEventListener("click", (e) => {
+      e.preventDefault();
+      toggleMobilePanel('mobileNotifPanel');
+    });
+  }
+
+  if (navbarToggler) {
+    navbarToggler.addEventListener("click", () => {
+      setTimeout(() => toggleMobilePanel('mobileNavLinks'), 250);
+    });
+  }
+}
+
+// Responsive reset
 window.addEventListener("resize", () => {
   const navbarCollapse = document.querySelector("#navbarContent");
   const navbarToggler = document.querySelector(".navbar-toggler");
@@ -218,4 +232,5 @@ window.addEventListener("resize", () => {
   }
 });
 
+// Load everything when DOM is ready
 document.addEventListener("DOMContentLoaded", loadDashNav);

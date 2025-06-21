@@ -99,11 +99,11 @@ section {
 
 .bell-dropdown .nav-link.active {
   background-color: var(--color-primary);
-  color: var(--color-back);
+  color: var(--color-primary);
 }
 .bell-dropdown .nav-link.active {
   background-color: var(--color-primary);
-  color: var(--color-back) !important;
+  color: var(--color-primary) !important;
 }
 
   .dropdown-menu {
@@ -197,11 +197,14 @@ section {
   left: 0;
   width: 100%;
   height: 100%;
-
   z-index: 0;
   pointer-events: none; 
 }
 
+.nav-link .nav-bot .active{
+background-color: var(--color-primary) !important;
+color: var(--color-bg) !important;
+}
 
 .auth-content {
   position: relative;
@@ -1126,5 +1129,8 @@ justify-content: space-evenly;
 }
 .hero-text h5{
   font-size: 14px;
+}
+.pro-btn {
+  display: none !important;
 }
 }

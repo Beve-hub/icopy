@@ -484,16 +484,14 @@ justify-content: space-evenly;
   border-radius: 5px;
   transition: width 0.4s ease;
 }
-.accordion {
-  background-color: var(--color-bg);
-  color: var(--color-text);
-}
 
+/*
 .accordion-body {
   background-color: var(--color-bg);
   color: var(--color-text);
   border: none;
-  border-radius: var(--border-radius);
+
+  border-radius: 12px;
   padding: 1em;
   font-size: 1rem;
   transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
@@ -516,11 +514,15 @@ justify-content: space-evenly;
   transform: rotate(180deg);
   transition: transform 0.2s ease-in-out;
 }
+*/
 
  .profile-small {
   display: none ;
 }
 
+.accordion {
+  border-radius: 12px;
+}
 .accordion-item {
   border: 1px solid var(--color-secondary);
   border-radius: 12px;
@@ -542,6 +544,7 @@ justify-content: space-evenly;
   color: var(--color-text);
   
 }
+ 
 
 .accordion-icon {
   margin-left: 12px;
@@ -998,7 +1001,7 @@ justify-content: space-evenly;
   margin: 10px 0;
 }
 }
-@media (max-width: 768px) {
+@media (max-width: 600px) {
   #testimonial-container {
     width: 250px;
   }

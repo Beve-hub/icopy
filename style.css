@@ -68,6 +68,34 @@ section {
   padding: 1em;
  
 }
+.collok {
+   position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+}
+
+.nav-final{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.second-container {
+   background-color: var(--color-back);
+  padding: 10px 30px;
+  border-radius: 10px;
+  margin: 0px 30px;
+}
+.second-nav .navbar-nav {
+  margin: 0 auto;
+}
+
+.second-nav {
+  justify-content: center !important;
+}
+
 .navbar {
     background-color: transparent !important;
   }
@@ -99,11 +127,11 @@ section {
 
 .bell-dropdown .nav-link.active {
   background-color: var(--color-primary);
-  color: var(--color-primary);
+  color: var(--color-bg);
 }
 .bell-dropdown .nav-link.active {
   background-color: var(--color-primary);
-  color: var(--color-primary) !important;
+  color: var(--color-bg) !important;
 }
 
   .dropdown-menu {
@@ -202,6 +230,11 @@ section {
 }
 
 .nav-link .nav-bot .active{
+background-color: var(--color-primary) !important;
+color: var(--color-bg) !important;
+}
+
+.nav-link .nav-bots .active{
 background-color: var(--color-primary) !important;
 color: var(--color-bg) !important;
 }
@@ -360,6 +393,9 @@ ul, ol {
   margin-top: 15rem;
 }
 
+.profile-display {
+  display: none;
+}
 button, input, textarea, select {
   font: inherit;
   padding: 0.5em;
@@ -1005,12 +1041,63 @@ justify-content: space-evenly;
 }
 }
 @media (max-width: 600px) {
+  .profile-display {
+  display: flex;
+}
+#mobileMainMenu .nav-link{
+  display: block;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+#mobileMainMenu .nav-link{
+  font-size: 16px !important;
+  margin-bottom: 10px;
+}
+  #bellTabMobile .nav-link.active {
+    background: var(--color-primary) !important;
+    color: var(--color-bg) !important;
+    border-color: var(--color-primary) var(--color-primary) var(--color-back) !important;
+  }
+  .nav-final ul li {
+  display: flex;
+  justify-content: flex-start !important;
+  align-items: flex-start !important;
+}
+ .navbar-collapse {
+    border: 1px solid var(--color-primary);
+    border-radius: 8px;
+    padding: 10px;
+    background-color: var(--color-back);
+  }
+
+  .navbar-collapse {
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+  .navbar-collapse .navbar-nav ul li{
+    justify-content: flex-start !important;
+    align-items: flex-start !important;
+    text-align: start;
+  }
+
+  .navbar-collapse .navbar-nav li {
+    width: 100%;
+  }
+  .second-container {
+   background-color: transparent;
+}
+
+.second-nav {
+  justify-content: start !important;
+  align-items: flex-start;
+}
+
   #testimonial-container {
     width: 250px;
   }
 
   .logo{
-    width: 100px ;
+    width: 120px ;
     height: auto;
   }
   .profile-logo {
@@ -1022,6 +1109,11 @@ justify-content: space-evenly;
   .profile-image{
     width: 30px;
     height: 30px;
+  }
+
+  .profile-images{
+    width: 20px;
+    height: 20px;
   }
   .card-titles {
     font-size: 24px !important;

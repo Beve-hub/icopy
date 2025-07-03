@@ -3,14 +3,277 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <title>iCopyTrader</title>
 </head>
 <body>
-    <!-- Navbar -->
-    <div id="navbar"></div>
+      <!-- Navbar -->
+<div class="collok">
+  <nav class="navbar navbar-expand-lg navbar-light px-4">
+    <div class="container-fluid">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="/index.html">
+        <img src="/assets/logo.png" alt="Logo" class="logo">
+      </a>
+
+      
+        <!---Profile -->
+        <div class="dropdown bell-dropdown profile-display">
+  <a href="#" class="d-flex align-items-center text-decoration-none gap-3" id="userDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+    <p class="d-grid mt-2">
+      <span class="fw-bold" style="font-size: 12px;">Lorem ipsum</span>
+      <span style="font-size: 10px;">Lorem ipsum dolor sit</span>
+    </p>  
+    <img src="/assets/p1.png" alt="" class="profile-images">
+  </a>
+
+  <ul class="dropdown-menu dropdown-menu-center p-4 gap-4 " aria-labelledby="userDropdown" style="width: 200px; background-color: var(--color-bg); color: var(--color-text); border: 1px solid var(--color-primary);">
+    <li class="mb-4 ">
+      <a href="/dashboard/profile.html" class="fs-6"> Profile</a>
+    </li>
+    <li class="">
+      <a href="/dashboard/setting.html" class="fs-6"> Setting</a>
+    </li>
+  </ul>
+         </div>
+      <!-- Desktop Right Side -->
+      <div class="d-flex align-items-center gap-4 d-none d-lg-flex">
+        <!-- Language -->
+        <select class="form-select form-select-sm w-auto bg-dark text-white" id="languageSelect">
+          <option class="bg-dark text-white" value="en">English</option>
+          <option class="bg-dark text-white" value="es">Spanish</option>
+          <option class="bg-dark text-white" value="fr">French</option>
+        </select>
+
+
+        <!---Profile -->
+        <div class="dropdown bell-dropdown">
+  <a href="#" class="d-flex align-items-center text-decoration-none gap-3" id="userDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+    <p class="d-grid mt-2">
+      <span class="fw-bold">Lorem ipsum</span>
+      <span style="font-size: 10px;">Lorem ipsum dolor sit</span>
+    </p>  
+    <img src="/assets/p1.png" alt="" class="profile-image">
+  </a>
+
+  <ul class="dropdown-menu dropdown-menu-center p-4 gap-4 " aria-labelledby="userDropdown" style="width: 200px; background-color: var(--color-bg); color: var(--color-text); border: 1px solid var(--color-primary);">
+    <li class="mb-4 ">
+      <a href="/dashboard/profile.html" class="fs-6"> Profile</a>
+    </li>
+    <li class="">
+      <a href="/dashboard/setting.html" class="fs-6"> Setting</a>
+    </li>
+  </ul>
+         </div>
+
+        <!-- Balance -->
+        <div class="dropdown">
+          <a href="#" class="text-secondary" title="Balance" id="briefDropdown" data-bs-toggle="dropdown">
+            <i class="bi bi-briefcase fs-5"></i>
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end p-4" style="width: 300px; background-color: var(--color-back); color: var(--color-text); border: 1px solid var(--color-primary);">
+            <div>
+              <img src="/assets/money-bag.png" alt="" style="width: 30px; height: 30px;">
+              <div class="d-flex flex-column gap-1 mt-2">
+                <span class="text-white fw-bold">Total Assets</span>
+                <span class="text-white fs-2 fw-bold">1234.56USDT</span>
+                <span class="text-white">~$1234.56</span>
+              </div>
+            </div>
+            <div class="d-grid m-4">
+              <button class="btn" style="background-color: var(--color-primary);">
+                <a href="/dashboard/overview.html" style="color: black;">Overview</a>
+              </button>
+            </div>
+          </ul>
+        </div>
+
+        <!-- Notifications -->
+        <div class="dropdown bell-dropdown">
+          <a href="#" class="text-secondary position-relative" title="Notifications" id="bellDropdown" data-bs-toggle="dropdown">
+            <i class="bi bi-bell fs-5"></i>
+            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill" style="font-size:0.6em; color: var(--color-back); background-color: var(--color-primary);">6</span>
+          </a>
+          <div class="dropdown-menu dropdown-menu-end p-2" style="width: 500px; background-color: var(--color-back); color: var(--color-text); border: 1px solid var(--color-primary);">
+           <ul class="nav nav-tabs m-4 " id="bellTab" role="tablist" style="background: var(--color-back); border: 1px solid var(--color-text); border-radius: 5px;">
+        <li class="nav-item " role="presentation">
+          <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#alerts" type="button" role="tab" aria-controls="alerts" aria-selected="true">Loreum</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" data-bs-toggle="tab" data-bs-target="#messages" type="button" role="tab" aria-controls="messages" aria-selected="false">Loreum</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" data-bs-toggle="tab" data-bs-target="#balance" type="button" role="tab" aria-controls="balance" aria-selected="false">Loreum</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" data-bs-toggle="tab" data-bs-target="#account" type="button" role="tab" aria-controls="account" aria-selected="false">Loreum</button>
+        </li>
+      </ul>
+
+      <div id="bellTabContent" class="p-3 tab-content">
+        <div class="notif-pane tab-pane fade show active" id="alerts" role="tabpanel" aria-labelledby="alerts-tab">
+           <ul class="list-unstyled">
+            <li class="mb-2 border-bottom pb-4" style="font-size: 16px;"><i class="bi bi-circle-fill" style="color: var(--color-primary); font-size: 0.5rem;"></i> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+            <li class="mb-2 border-bottom pb-4" style="font-size: 16px;"><i class="bi bi-circle-fill" style="color: var(--color-primary); font-size: 0.5rem;"></i> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+            <li class="mb-2 border-bottom pb-4" style="font-size: 16px;"><i class="bi bi-circle-fill" style="color: var(--color-primary); font-size: 0.5rem;"></i> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+          </ul>
+        </div>
+        <div class="notif-pane tab-pane fade" id="messages" role="tabpanel" aria-labelledby="messages-tab">No new messages.</div>
+        <div class="notif-pane tab-pane fade" id="balance" role="tabpanel" aria-labelledby="balance-tab">
+           <ul class="list-unstyled">
+            <li class="mb-2 border-bottom pb-4" style="font-size: 16px;"><i class="bi bi-circle-fill" style="color: var(--color-primary); font-size: 0.5rem;"></i> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+            <li class="mb-2 border-bottom pb-4" style="font-size: 16px;"><i class="bi bi-circle-fill" style="color: var(--color-primary); font-size: 0.5rem;"></i> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+            <li class="mb-2 border-bottom pb-4" style="font-size: 16px;"><i class="bi bi-circle-fill" style="color: var(--color-primary); font-size: 0.5rem;"></i> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+          </ul>
+        </div>
+        <div class="notif-pane tab-pane fade" id="account" role="tabpanel" aria-labelledby="account-tab">
+           <ul class="list-unstyled">
+            <li class="mb-2 border-bottom pb-4" style="font-size: 16px;"><i class="bi bi-circle-fill" style="color: var(--color-primary); font-size: 0.5rem;"></i> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+            <li class="mb-2 border-bottom pb-4" style="font-size: 16px;"><i class="bi bi-circle-fill" style="color: var(--color-primary); font-size: 0.5rem;"></i> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+            <li class="mb-2 border-bottom pb-4" style="font-size: 16px;"><i class="bi bi-circle-fill" style="color: var(--color-primary); font-size: 0.5rem;"></i> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+          </ul>
+        </div>
+      </div>
+          </div>
+        </div>
+
+        <!-- Logout -->
+        <a href="#" class="text-danger" title="Logout" id="logoutBtn">
+          <i class="bi bi-box-arrow-right fs-5"></i>
+        </a>
+      </div>
+
+      <!-- Hamburger Menu -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#secondNavbar" aria-controls="secondNavbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Second Navbar Layer -->
+   <div class="second-container">
+    <nav class="second-nav navbar navbar-expand-lg ">
+    <div class="container-fluid">
+      <div class="collapse navbar-collapse" id="secondNavbar">
+
+   <div class="d-lg-none d-flex justify-content-between align-items-center mt-3 gap-4">
+            <select class="form-select bg-dark text-white w-50" id="languageSelectMobile">
+              <option value="en">English</option>
+              <option value="es">Spanish</option>
+              <option value="fr">French</option>
+            </select>
+            
+            <div class="d-flex gap-3">
+              <a href="javascript:void(0)" onclick="showMobileView('balance')" class="text-secondary">
+                <i class="bi bi-briefcase fs-5"></i>
+              </a>
+              <a href="javascript:void(0)" onclick="showMobileView('notification')" class="text-secondary position-relative">
+                <i class="bi bi-bell fs-5"></i>
+                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill"
+                      style="font-size:0.6em; color: var(--color-back); background-color: var(--color-primary);">6</span>
+              </a>
+              <a href="#" class="text-danger" title="Logout" id="logoutBtn">
+                <i class="bi bi-box-arrow-right fs-5"></i>
+              </a>
+            </div>
+          </div>
+
+       
+          <div class="mobile-menu-view w-100 mt-3">
+            <!-- Main Menu -->
+            <div id="mobileMainMenu" class="nav-final" >
+              <ul class="navbar-nav mb-lg-0">
+                <li class="nav-item"><a class="nav-link gap-2" href="/dashboard/Copy.html" style=" font-size: 18px;"><i class="bi bi-people nav-icon" ></i> Copy Trading</a></li>
+                <li class="nav-item"><a class="nav-link gap-2" href="/dashboard/leverage.html" style=" font-size: 18px;"><i class="bi bi-graph-up nav-icon"></i> Leverage</a></li>
+                <li class="nav-item"><a class="nav-link gap-2" href="/dashboard/mining.html" style=" font-size: 18px;"><i class="bi bi-cpu nav-icon" ></i> Mining</a></li>
+                <li class="nav-item"><a class="nav-link gap-2" href="/dashboard/deposit.html" style="color: var(--color-primary) !important; font-size: 18px;"><i class="bi bi-box-arrow-in-down nav-icon" style="color: var(--color-primary) !important;"></i> Deposit</a></li>
+                <li class="nav-item"><a class="nav-link gap-2" href="/dashboard/withdrawals.html" style=" font-size: 18px;"><i class="bi bi-box-arrow-up nav-icon"></i> Withdrawals</a></li>
+                <li class="nav-item"><a class="nav-link gap-2" href="/dashboard/Referrals.html" style=" font-size: 18px;"><i class="bi bi-person-plus nav-icon"></i> Referrals</a></li>
+                <li class="nav-item"><a class="nav-link gap-2" href="/dashboard/pricing.html" style=" font-size: 18px;"><i class="bi bi-currency-dollar nav-icon"></i> Pricing</a></li>
+              </ul>
+            </div>
+
+            <!-- Balance View -->
+            <div id="mobileBalanceMenu" class="d-none">
+              <div class="">
+                <img src="/assets/money-bag.png" style="width: 30px; height: 30px;">
+                <div class="d-flex flex-column gap-1 mt-2">
+                  <span class="text-white fw-bold">Total Assets</span>
+                  <span class="text-white fs-2 fw-bold">1234.56USDT</span>
+                  <span class="text-white">~$1234.56</span>
+                </div>
+                <div class="d-grid m-4">
+              <button class="btn" style="background-color: var(--color-primary);">
+                <a href="/dashboard/overview.html" style="color: black;">Overview</a>
+              </button>
+            </div>
+              </div>
+            </div>
+
+            <!-- Notification View -->
+            <div id="mobileNotificationMenu" class="d-none">
+         
+        <div style="overflow-x: auto; white-space: nowrap;">
+  <ul class="nav nav-tabs flex-nowrap mb-3" id="bellTabMobile" role="tablist"
+      style="border: 1px solid var(--color-text); border-radius: 5px; min-width: max-content;">
+    <li class="nav-item">
+      <button class="nav-link nav-bots active" data-bs-toggle="tab" data-bs-target="#alertsMobile" type="button" style="font-size: 10px;">Loreum</button>
+    </li>
+    <li class="nav-item">
+      <button class="nav-link nav-bot" data-bs-toggle="tab" data-bs-target="#messagesMobile" type="button" style="font-size: 10px;">Loreum</button>
+    </li>
+    <li class="nav-item">
+      <button class="nav-link nav-bot" data-bs-toggle="tab" data-bs-target="#balanceMobile" type="button" style="font-size: 10px;">Loreum</button>
+    </li>
+    <li class="nav-item">
+      <button class="nav-link nav-bot" data-bs-toggle="tab" data-bs-target="#accountMobile" type="button" style="font-size: 10px;">Loreum</button>
+    </li>
+  </ul>
+</div>
+
+        <div class="tab-content">
+          <div class="tab-pane fade show active" >
+            <ul class="list-unstyled">
+              <li class="mb-2 border-bottom pb-2" style="font-size: 10px;"><i class="bi bi-circle-fill" style="color: var(--color-primary); font-size: 0.5rem;"></i> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+              <li class="mb-2 border-bottom pb-2" style="font-size: 10px;"><i class="bi bi-circle-fill" style="color: var(--color-primary); font-size: 0.5rem;"></i> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+            </ul>
+          </div>
+          <div class="tab-pane fade" id="messagesMobile" style="font-size: 10px;">No new messages.</div>
+
+           <div class="notif-pane tab-pane fade show active" id="alertsMobile" >
+          <ul class="list-unstyled">
+            <li class="mb-2 border-bottom pb-4" style="font-size: 10px;"><i class="bi bi-circle-fill" style="color: var(--color-primary); font-size: 0.5rem;"></i> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+            <li class="mb-2 border-bottom pb-4" style="font-size: 10px;"><i class="bi bi-circle-fill" style="color: var(--color-primary); font-size: 0.5rem;"></i> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+            <li class="mb-2 border-bottom pb-4" style="font-size: 10px;"><i class="bi bi-circle-fill" style="color: var(--color-primary); font-size: 0.5rem;"></i> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+          </ul>
+        </div>
+        <div class="notif-pane tab-pane fade" id="messagesMobile" >
+           <ul class="list-unstyled">
+            <li class="mb-2 border-bottom pb-4" style="font-size: 10px;"><i class="bi bi-circle-fill" style="color: var(--color-primary); font-size: 0.5rem;"></i> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+            <li class="mb-2 border-bottom pb-4" style="font-size: 10px;"><i class="bi bi-circle-fill" style="color: var(--color-primary); font-size: 0.5rem;"></i> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+            <li class="mb-2 border-bottom pb-4" style="font-size: 10px;"><i class="bi bi-circle-fill" style="color: var(--color-primary); font-size: 0.5rem;"></i> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+          </ul>
+        </div>
+        <div class="notif-pane tab-pane fade" id="balanceMobile" >
+          <ul class="list-unstyled">
+            <li class="mb-2 border-bottom pb-4" style="font-size: 10px;"><i class="bi bi-circle-fill" style="color: var(--color-primary); font-size: 0.3rem;"></i> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+            <li class="mb-2 border-bottom pb-4" style="font-size: 10px;"><i class="bi bi-circle-fill" style="color: var(--color-primary); font-size: 0.3rem;"></i> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+            <li class="mb-2 border-bottom pb-4" style="font-size: 10px;"><i class="bi bi-circle-fill" style="color: var(--color-primary); font-size: 0.3rem;"></i> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+          </ul>
+        </div>
+        <div class="notif-pane tab-pane fade" id="accountMobile" >No new messages.</div>
+      </div>
+        
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </nav>
+   </div>
+  
+</div>
     
       <div class="dash-back">
         <div class="container">
@@ -82,8 +345,38 @@
     <!--footer-->
   <div id="footer"></div>
    <!-- js -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
-   <script type="module" src="/component/dashNav/dashNav.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+   <script>
+function showMobileView(view) {
+  document.getElementById('mobileMainMenu').classList.add('d-none');
+  document.getElementById('mobileBalanceMenu').classList.add('d-none');
+  document.getElementById('mobileNotificationMenu').classList.add('d-none');
+
+  if (view === 'balance') {
+    document.getElementById('mobileBalanceMenu').classList.remove('d-none');
+  } else if (view === 'notification') {
+    document.getElementById('mobileNotificationMenu').classList.remove('d-none');
+  }
+}
+
+// Always show main menu on large screens
+function handleResize() {
+  const isLarge = window.innerWidth >= 992; // Bootstrap lg breakpoint
+  if (isLarge) {
+    document.getElementById('mobileMainMenu').classList.remove('d-none');
+    document.getElementById('mobileBalanceMenu').classList.add('d-none');
+    document.getElementById('mobileNotificationMenu').classList.add('d-none');
+  }
+}
+window.addEventListener('resize', handleResize);
+window.addEventListener('DOMContentLoaded', handleResize);
+
+function showMainMenu() {
+  document.getElementById('mobileMainMenu').classList.remove('d-none');
+  document.getElementById('mobileBalanceMenu').classList.add('d-none');
+  document.getElementById('mobileNotificationMenu').classList.add('d-none');
+}
+</script>
   <script src="/component/footer/footer.js"></script>
   <script src="/utils/uploadImage.js"></script>
 

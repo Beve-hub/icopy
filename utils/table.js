@@ -2,9 +2,9 @@ class DepositTable extends HTMLElement {
   connectedCallback() {
     const width = this.getAttribute('width') || '100%';
 
-    this.innerHTML = `
-      <div style="width: ${width}; overflow-x: auto;">
-        <table class="table table-sm" style="width: 100%;">
+   this.innerHTML = `
+      <div style="width: ${width}; overflow-x: auto; ">
+        <table class="table table-sm bg-transparent" style="width: 100%; background-color: var(--color-back) !important;">
           <thead>
             <tr>
               <th scope="col" style=" font-size:13px;"># </th>

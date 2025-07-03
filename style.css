@@ -846,13 +846,30 @@ justify-content: space-evenly;
   width: 24px;
   height: 24px;
   background: var(--color-primary);
-
   border-radius: 50%;
   z-index: 20;
   pointer-events: none;
   transition: left 0.2s;
 }
+ deposit-table table,
+  deposit-table thead,
+  deposit-table tbody,
+  deposit-table tr,
+  deposit-table th,
+  deposit-table td {
+    background-color: transparent !important;
+    color: var(--color-text) !important;
+  }
 
+   .table.bg-transparent,
+  .table.bg-transparent thead,
+  .table.bg-transparent tbody,
+  .table.bg-transparent tr,
+  .table.bg-transparent td,
+  .table.bg-transparent th {
+    background-color: transparent !important;
+    color: var(--color-text) !important;
+  }
 .range-labels {
   position: absolute;
   top: 20px;

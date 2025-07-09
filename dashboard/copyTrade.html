@@ -9,8 +9,8 @@
     <title>iCopyTrader</title>
 </head>
 <body>
-    <!-- Navbar -->
-      <div class="collok">
+     <!-- Navbar -->
+<div class="collok">
   <nav class="navbar navbar-expand-lg navbar-light px-4">
     <div class="container-fluid">
       <a class="navbar-brand d-flex align-items-center gap-2" href="/index.html">
@@ -184,10 +184,10 @@
             <!-- Main Menu -->
             <div id="mobileMainMenu" class="nav-final" >
               <ul class="navbar-nav mb-lg-0">
-                <li class="nav-item"><a class="nav-link gap-2" href="/dashboard/copyTrade.html" style=" font-size: 18px;"><i class="bi bi-people nav-icon" ></i> Copy Trading</a></li>
+                <li class="nav-item"><a class="nav-link gap-2" href="/dashboard/Copy.html" style="color: var(--color-primary) !important; font-size: 18px;"><i class="bi bi-people nav-icon" style="color: var(--color-primary) !important;"></i> Copy Trading</a></li>
                 <li class="nav-item"><a class="nav-link gap-2" href="/dashboard/leverage.html" style=" font-size: 18px;"><i class="bi bi-graph-up nav-icon"></i> Leverage</a></li>
-                <li class="nav-item"><a class="nav-link gap-2" href="/dashboard/mining.html" style=" font-size: 18px;"><i class="bi bi-cpu nav-icon" ></i> Mining</a></li>
-                <li class="nav-item"><a class="nav-link gap-2" href="/dashboard/deposit.html" style=" font-size: 18px;"><i class="bi bi-box-arrow-in-down nav-icon" ></i> Deposit</a></li>
+                <li class="nav-item"><a class="nav-link gap-2" href="/dashboard/mining.html" style=" font-size: 18px;"><i class="bi bi-cpu nav-icon"></i> Mining</a></li>
+                <li class="nav-item"><a class="nav-link gap-2" href="/dashboard/deposit.html" style=" font-size: 18px;"><i class="bi bi-box-arrow-in-down nav-icon"></i> Deposit</a></li>
                 <li class="nav-item"><a class="nav-link gap-2" href="/dashboard/withdrawals.html" style=" font-size: 18px;"><i class="bi bi-box-arrow-up nav-icon"></i> Withdrawals</a></li>
                 <li class="nav-item"><a class="nav-link gap-2" href="/dashboard/Referrals.html" style=" font-size: 18px;"><i class="bi bi-person-plus nav-icon"></i> Referrals</a></li>
                 <li class="nav-item"><a class="nav-link gap-2" href="/dashboard/pricing.html" style=" font-size: 18px;"><i class="bi bi-currency-dollar nav-icon"></i> Pricing</a></li>
@@ -273,70 +273,356 @@
     </nav>
    </div>
   
+</div>
+
+
+   <!-- Hero Section -->
+<div class="dash-back">
+  <div class="container my-4">
+    <div class="border rounded-3">
+      <div class="row g-3 m-2 flex-column flex-lg-row">
+
+        <!-- Left Column (Balance Info) -->
+        <div class="col-12 col-lg-6 order-2 order-lg-1">
+          <div class="p-4 crop h-100">
+            <div>
+              <h5 class="fw-semibold">Your Balance</h5>
+              <p>Jul 07, 2025 11:09 AM</p>
+            </div>
+
+            <div>
+              <h5 class="fw-semibold">Trading Deposit Balance</h5>
+              <p>$<span>0.00</span></p>
+            </div>
+
+            <div class="py-3 d-flex gap-3 align-items-center">
+              <img src="/assets/refdepths.png" alt="" style="width: 40px;" class="img-fluid">
+              <div class="d-grid">
+                <span>Profit Balance</span>
+                <span>$0.00</span>
+              </div>
+            </div>
+
+            <div class="py-3 d-flex gap-3 align-items-center">
+              <img src="/assets/refdepths.png" alt="" style="width: 40px;" class="img-fluid">
+              <div class="d-grid">
+                <span>Mining Balance</span>
+                <span>$0.00</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column (BTC Info) -->
+        <div class="col-12 col-lg-6 order-1 order-lg-2">
+          <div class="p-4 h-100">
+            <div class="d-flex gap-3 align-items-center mb-3">
+              <img src="/assets/bitcoin-icon.png" alt="" class="img-fluid" style="width: 2rem; height: 2rem;">
+              <div class="d-grid">
+                <span>BTCUSD</span>
+                <span>BITCOIN / U.S. DOLLAR</span>
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <div class="d-flex flex-wrap align-items-center">
+                <p class="fs-2 text-start me-3" style="color: var(--color-primary); margin: 10px;">$65,000.00</p>
+                <p style="color: var(--color-red); margin: 10px;">-490% (533.00)</p>
+              </div>
+
+              <canvas id="btcLineChart" width="100%" height="20%"></canvas>
+            </div>
+
+            <div class="d-flex justify-content-center my-4">
+              <div class="d-flex gap-3 flex-wrap">
+                <a href="/dashboard/buyContract.html" class="btn" style="background-color: var(--color-bg); color:var(--color-text);">Add Funds</a>
+                <a href="/dashboard/myContract.html" class="btn" style="background-color: var(--color-bg); color:var(--color-text);">Withdrawal</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
-    
+    </div>
+  </div>
+</div>
 
-    <div class="dash-back">
 
-        <div class="container py-5">
-        <h5 class="fw-bold  border-bottom py-4">Asset Overview</h5>
 
-        <div class="mt-5">
-            <p>Total Assets</p>
-            <h3>0.909USDT</h3>
-            <p>~$0.00</p>
-        </div>
-
-        <div class="border p-4 mt-5" style="border-radius: 10px;">
-            <h5 class="fw-bold  border-bottom py-4">Asset Amount</h5>
-
-        <div class="my-2">
-            <p style="color: gray;">Total Assets</p>
-            <div class="d-flex align-items-center text-center gap-3">
-                <h5>0.909USDT</h5>
-            <p style="color: gray;">~$0.00</p>
+    <div class="dash-backe">
+        <div class="container py-4 border" style="border-radius: 10px; border-color: var(--color-primary) !important; background-color: var(--color-back);">
+            <div class="d-flex gap-2 justify-content-around align-items-center border-bottom " style="padding: 0px 18px;">
+             <p class="fw-bold fs-5" style="color: var(--color-primary); width: 100px; ">Open</p>
+             <p class="fw-bold fs-5" style="color: var(--color-text); width: 100px;">Close</p>
             </div>
-        </div>
 
-        <div class="my-2">
-            <p style="color: gray;">Total Assets</p>
-            <div class="d-flex align-items-center text-center gap-3">
-                <h5>0.909USDT</h5>
-            <p style="color: gray;">~$0.00</p>
-            </div>
-        </div>
+ 
+                <!-- Table -->
+      <div class="table-responsive">
+        <table class="table table-sm bg-transparent" style="background-color: var(--color-back);">
+          <thead>
+            <tr>
+              <th scope="col" style="font-size:13px; padding: 14px 18px;">Order</th>
+              <th scope="col" style="font-size:13px; padding: 14px 18px;">Trader</th>
+              <th scope="col" style="font-size:13px; padding: 14px 18px;">Invested</th>
+              <th scope="col" style="font-size:13px; padding: 14px 18px;">P/L</th>
+              <th scope="col" style="font-size:13px; padding: 14px 18px;">Created</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="font-size:13px; padding: 14px 18px;">Lorem ipsum</td>
+              <td style="font-size:13px; padding: 14px 18px;">Lorem ipsum</td>
+              <td style="font-size:13px; padding: 14px 18px;">Lorem ipsum</td>
+              <td style="font-size:13px; padding: 14px 18px;">Lorem ipsum</td>
+              <td style="font-size:13px; padding: 14px 18px;">Lorem ipsum</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
 
-        <div class="my-2">
-            <p style="color: gray;">Total Assets</p>
-            <div class="d-flex align-items-center text-center gap-3">
-                <h5>0.909USDT</h5>
-            <p style="color: gray;">~$0.00</p>
-            </div>
-        </div>
-
-        <div class="my-2">
-            <p style="color: gray;">Total Assets</p>
-            <div class="d-flex align-items-center text-center gap-3">
-                <h5>0.909USDT</h5>
-            <p style="color: gray;">~$0.00</p>
-            </div>
-        </div>
-        </div>
-
-        <div class="border p-4 mt-5" style="border-radius: 10px;">
-            <h5 class="fw-bold  border-bottom py-4">Deposits & Withdrawals</h5>
-            <div class="py-5 d-flex justify-content-center ">
-                <img src="/assets/over.png" alt="" width="auto" height="auto">
-            </div>
         </div>
     </div>
-    </div>
+
+
+    <div class="dash-backe">
+        <div class="container py-4 border my-5" style="border-radius: 10px; border-color: var(--color-primary) !important; background-color: var(--color-back);">
+            <div class="d-flex gap-2 justify-content-around align-items-center" style="padding: 0px 18px;">
+             <p class=" p-2 border fs-6" style="color: var(--color-text); border-color: var(--color-primary); border-radius:5px; ">My Traders</p>
+             <p class=" p-2 border fs-6" style="color: var(--color-text); border-color: var(--color-primary); border-radius:5px; ">Traders</p>
+            </div>
+
+            
+      <div class="container my-3 px-3">
+  <div class="row g-3 text-center p-3 rounded" style="border: 2px solid var(--color-secondary); background-color: var(--color-back);">
     
+    <!-- Column 1 -->
+    <div class="col-12 col-md-6 col-lg-4">
+      <div class="d-flex crops align-items-center justify-content-center justify-content-md-start border-md-end gap-3 h-100">
+        <img src="/assets/p1.png" alt="icon" style="width: 40px;">
+        <div class="text-start">
+          <span class="d-block small">Lorem ipsum</span>
+          <span class="d-block small">Lorem ipsum dolor sit</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Column 2 -->
+    <div class="col-12 col-md-6 col-lg-4">
+      <div class="h-100 crop d-flex flex-column justify-content-center border-md-end">
+        <span class="fw-bold">Your Balance</span>
+        <span>Return Rate</span>
+      </div>
+    </div>
+
+    <!-- Column 3 -->
+    <div class="col-12 col-md-12 col-lg-4">
+      <div class="h-100 cropt d-flex flex-column justify-content-center">
+        <span class="fw-bold">2661</span>
+        <span>Followers</span>
+      </div>
+    </div>
+
+  </div>
+      </div>
+
+      <div class="container my-3 px-3">
+  <div class="row g-3 text-center p-3 rounded" style="border: 2px solid var(--color-secondary); background-color: var(--color-back);">
+    
+    <!-- Column 1 -->
+    <div class="col-12 col-md-6 col-lg-4">
+      <div class="d-flex crops align-items-center justify-content-center justify-content-md-start border-md-end gap-3 h-100">
+        <img src="/assets/p1.png" alt="icon" style="width: 40px;">
+        <div class="text-start">
+          <span class="d-block small">Lorem ipsum</span>
+          <span class="d-block small">Lorem ipsum dolor sit</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Column 2 -->
+    <div class="col-12 col-md-6 col-lg-4">
+      <div class="h-100 crop d-flex flex-column justify-content-center border-md-end">
+        <span class="fw-bold">Your Balance</span>
+        <span>Return Rate</span>
+      </div>
+    </div>
+
+    <!-- Column 3 -->
+    <div class="col-12 col-md-12 col-lg-4">
+      <div class="h-100 cropt d-flex flex-column justify-content-center">
+        <span class="fw-bold">2661</span>
+        <span>Followers</span>
+      </div>
+    </div>
+
+  </div>
+      </div>
+
+
+      <div class="container my-3 px-3">
+  <div class="row g-3 text-center p-3 rounded" style="border: 2px solid var(--color-secondary); background-color: var(--color-back);">
+    
+    <!-- Column 1 -->
+    <div class="col-12 col-md-6 col-lg-4">
+      <div class="d-flex crops align-items-center justify-content-center justify-content-md-start border-md-end gap-3 h-100">
+        <img src="/assets/p1.png" alt="icon" style="width: 40px;">
+        <div class="text-start">
+          <span class="d-block small">Lorem ipsum</span>
+          <span class="d-block small">Lorem ipsum dolor sit</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Column 2 -->
+    <div class="col-12 col-md-6 col-lg-4">
+      <div class="h-100 crop d-flex flex-column justify-content-center border-md-end">
+        <span class="fw-bold">Your Balance</span>
+        <span>Return Rate</span>
+      </div>
+    </div>
+
+    <!-- Column 3 -->
+    <div class="col-12 col-md-12 col-lg-4">
+      <div class="h-100 cropt d-flex flex-column justify-content-center">
+        <span class="fw-bold">2661</span>
+        <span>Followers</span>
+      </div>
+    </div>
+
+  </div>
+      </div>
+
+
+  
+
+
+        </div>
+    </div>
+
+
 
     <!--footer-->
   <div id="footer"></div>
-   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-   <script>
+   <!-- js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+   <script type="module" src="/component/dashNav/dashNav.js"></script>
+  <script src="/component/footer/footer.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script type="module">
+  import { createLineChart, enableCopyButtons } from '/utils/plan.js';
+
+  // Example 1: Show both axes
+  createLineChart({
+    id: 'ethLineChart',
+    width: 200,
+    height: 50,
+    data: [20, 10, 30, 5],
+    borderColor: '#D4FF27',
+    pointColor: '#D4FF27',
+    label: 'Example 1',
+    showXAxis: false,
+    showYAxis: false
+  });
+
+  // Example 2: Hide both axes
+  createLineChart({
+    id: 'btcLineChart',
+    width: 200,
+    height: 50,
+   data: [20, 10, 30, 5],
+    borderColor: '#D4FF27',
+    pointColor: '#D4FF27',
+    label: 'Example 2',
+    showXAxis: false,
+    showYAxis: false
+  });
+
+
+  // Example 3: Hide both axes
+  createLineChart({
+    id: 'bnbLineChart',
+    width: 200,
+    height: 50,
+   data: [20, 10, 30, 5],
+    borderColor: '#D4FF27',
+    pointColor: '#D4FF27',
+    label: 'Example 2',
+    showXAxis: false,
+    showYAxis: false
+  });
+
+  // Example 4: Hide both axes
+  createLineChart({
+    id: 'dogLineChart',
+    width: 200,
+    height: 50,
+   data: [20, 10, 30, 5],
+    borderColor: '#D4FF27',
+    pointColor: '#D4FF27',
+    label: 'Example 2',
+    showXAxis: false,
+    showYAxis: false
+  });
+
+
+  // Example 5: Hide both axes
+  createLineChart({
+    id: 'kasLineChart',
+    width: 200,
+    height: 50,
+   data: [20, 10, 30, 5],
+    borderColor: '#D4FF27',
+    pointColor: '#D4FF27',
+    label: 'Example 2',
+    showXAxis: false,
+    showYAxis: false
+  });
+
+  // Example 6: Hide both axes
+  createLineChart({
+    id: 'usdcLineChart',
+    width: 200,
+    height: 50,
+   data: [20, 10, 30, 5],
+    borderColor: '#D4FF27',
+    pointColor: '#D4FF27',
+    label: 'Example 2',
+    showXAxis: false,
+    showYAxis: false
+  });
+
+  // Example 7: Hide both axes
+  createLineChart({
+    id: 'usdtLineChart',
+    width: 200,
+    height: 50,
+   data: [20, 10, 30, 5],
+    borderColor: '#D4FF27',
+    pointColor: '#D4FF27',
+    label: 'Example 2',
+    showXAxis: false,
+    showYAxis: false
+  });
+
+  // Example 8: Hide both axes
+  createLineChart({
+    id: 'tonLineChart',
+    width: 200,
+    height: 50,
+   data: [20, 10, 30, 5],
+    borderColor: '#D4FF27',
+    pointColor: '#D4FF27',
+    label: 'Example 2',
+    showXAxis: false,
+    showYAxis: false
+  });
+
+
+  // Enable copy buttons (if you use them)
+  enableCopyButtons();
+</script>
+<script>
 function showMobileView(view) {
   document.getElementById('mobileMainMenu').classList.add('d-none');
   document.getElementById('mobileBalanceMenu').classList.add('d-none');
@@ -367,7 +653,43 @@ function showMainMenu() {
   document.getElementById('mobileNotificationMenu').classList.add('d-none');
 }
 </script>
-  <script src="/component/footer/footer.js"></script>
-  
+<script>
+   const btcCtx = document.getElementById('btcLineChart').getContext('2d');
+  new Chart(btcCtx, {
+    type: 'line',
+    data: {
+      labels: ['March', 'April', 'May', 'June','July', 'Aug'],
+      datasets: [{
+        label: 'BTC Mining Balance',
+        data: [50000, 60000, 45000, 67000, 40000, 70000],
+        borderColor: 'rgba(0, 200, 83, 1)',
+        backgroundColor: 'rgba(0,0,0,0)',
+        tension: 0.3,
+        fill: false,
+        pointRadius: 5,
+        pointBackgroundColor: 'rgba(0, 200, 83, 1)'
+      }]
+    },
+    options: {
+      responsive: true,
+      plugins: {
+        legend: { display: false }
+      },
+      scales: {
+        y: { display: false },
+        x: {
+          display: true,
+          grid: {
+            display: true,
+            drawBorder: true,
+            drawOnChartArea: false
+          }
+        }
+      }
+    }
+  });
+
+ 
+</script>
 </body>
 </html>

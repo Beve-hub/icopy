@@ -259,6 +259,14 @@ color: var(--color-bg) !important;
   z-index: 2;
 }
 
+.crop{
+  border-right: 1px solid var(--color-text);
+}
+
+.crops {
+  border-right: 1px solid var(--color-text);
+}
+
 .form-control,
 .form-control:focus,
 .form-control:valid,
@@ -1247,5 +1255,17 @@ justify-content: space-evenly;
 }
 .subscribe{
   background-color: var(--color-primary) !important;
+}
+.crop{
+  border-top: 1px solid var(--color-text);
+  border-right: none;
+}
+.crops{
+  border-bottom: none;
+  border-right: none;
+}
+.cropt{
+  border-top: 1px solid var(--color-text);
+  border-right: none;
 }
 }
